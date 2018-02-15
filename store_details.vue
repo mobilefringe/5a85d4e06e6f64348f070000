@@ -40,7 +40,7 @@
                     </div>
                     <div class="margin_40"></div>
                     <div class="row">
-                        <div class="col-md-4">
+                        <div class="col-md-4 col-md-push-8">
                             <p class="store_details_hour_title">Store Hours</p>
                             <ul class="store_details_hours">
                                 <li v-for="hour in storeHours">
@@ -54,7 +54,7 @@
                                 <hr>    
                             </div>
                         </div>
-                        <div class="col-md-8 margin_30">
+                        <div class="col-md-8 col-md-push-4">
                             <div class="store_details_desc" v-html="currentStore.rich_description"></div>
                         </div>
                     </div>
