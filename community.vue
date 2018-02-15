@@ -214,6 +214,14 @@
                 ]),
             },
             methods: {
+                loadData: async function () {
+                    try {
+                        let results = await Promise.all([this.$store.dispatch('LOAD_PAGE_DATA', {url: this.property.mm_host + "/pages/milton-contact-us.json"})]);
+                        return results;
+                    } catch (e) {
+                        console.log("Error loading data: " + e.message);
+                    }
+                },
                 validateBeforeSubmit() {
                     this.validNumError = false;
                     this.$validator.validateAll().then((result) => {
