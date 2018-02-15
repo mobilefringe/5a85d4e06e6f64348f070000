@@ -763,7 +763,8 @@ footer {
 }
 .form-control-feedback {
     width: 100%;
-    font-size: 14px;
+    bottom: 0;
+    font-size: 12px;
 }
 .contact.page_body {
     font-size: 16px !important;
