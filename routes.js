@@ -14,7 +14,7 @@ define([], function () {
                     meta: {
                         pageName: 'Community Space',
                     },
-                    name: 'contact'
+                    name: 'community'
                 }
             ]
         },
