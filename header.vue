@@ -92,7 +92,7 @@
                                         <router-link tag="li" to="/hours" class="submenu_item" exact>
                                             <a>Hours</a>
                                         </router-link>
-                                        <router-link tag="li" to="/" class="submenu_item" exact>
+                                        <router-link tag="li" to="/community" class="submenu_item" exact>
                                             <a>Community</a>
                                         </router-link>
                                     </ul>
