@@ -279,8 +279,8 @@ header {
 }
 #primary_nav ul .menu_item {
     margin: 0;
-	padding: 5px 0;
-    width: 130px;
+	padding: 5px;
+    min-width: 120px;
     display: inline-block;
 	position: relative;
     text-align: center;
@@ -301,7 +301,7 @@ header {
 	text-transform: none;
 }
 #primary_nav ul ul .submenu_item {
-	width: 130px;
+	width: 120px;
 }
 #primary_nav ul ul a {
 	padding: 10px 15px;
