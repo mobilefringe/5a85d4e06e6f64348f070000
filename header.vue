@@ -51,7 +51,7 @@
                                         <router-link tag="li" to="/stores" class="submenu_item" exact>
                                             <a>Store Directory</a>
                                         </router-link>
-                                        <router-link tag="li" to="/stores" class="submenu_item" exact>
+                                        <router-link tag="li" to="/pages/milton-office-directory" class="submenu_item" exact>
                                             <a>Office Directory</a>
                                         </router-link>
                                         <router-link tag="li" to="/map" class="submenu_item" exact>
