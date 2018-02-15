@@ -135,7 +135,7 @@
     						</div>
     						<div class="form-group account-btn text-left m-t-10">
     							<div class="col-xs-12">
-    								<button class="feature-readmore" type="submit" :disabled="formSuccess">Submit</button>
+    								<button class="animated_btn" type="submit" :disabled="formSuccess">Submit</button>
     							</div>
     						</div>
     					</form>
