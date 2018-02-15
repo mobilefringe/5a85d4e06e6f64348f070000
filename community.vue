@@ -162,6 +162,7 @@
             template: template, // the variable template will be injected
             data: function() {
                 return {
+                    dataLoaded: false,
                     form_data: {},
                     formSuccess: false,
                     formError: false,
@@ -194,6 +195,12 @@
                 }, error => {
                     console.error("Could not retrieve data from server. Please check internet connection and try again.");
                     this.$router.replace({ path: '/'});
+                });
+            },
+            created() {
+                this.loadData().then(response => {
+                    this.currentPage = response[0].data;
+                    this.dataLoaded = true;
                 });
             },
             mounted() {
