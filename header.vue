@@ -49,7 +49,10 @@
                                 <li id="dropDown1" @click="toggleSubMenu('dropDown1')" class="menu_item">Store Directory
                                     <ul :class="'submenu' + { show_submenu: showSubMenu1 }">
                                         <router-link tag="li" to="/stores" class="submenu_item" exact>
-                                            <a>Stores</a>
+                                            <a>Store Directory</a>
+                                        </router-link>
+                                        <router-link tag="li" to="/stores" class="submenu_item" exact>
+                                            <a>Office Directory</a>
                                         </router-link>
                                         <router-link tag="li" to="/map" class="submenu_item" exact>
                                             <a>Centre Map</a>
