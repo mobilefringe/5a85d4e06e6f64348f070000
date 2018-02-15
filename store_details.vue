@@ -54,7 +54,7 @@
                                 <hr>    
                             </div>
                         </div>
-                        <div class="col-md-8 col-md-push-4">
+                        <div class="col-md-8 col-md-pull-4">
                             <div class="store_details_desc" v-html="currentStore.rich_description"></div>
                         </div>
                     </div>
