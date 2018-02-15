@@ -65,7 +65,9 @@
             },
             methods: {
                 getPageName(){
-                    if(this.$route.fullPath == "/pages/milton-leasing") {
+                    if(this.$route.fullPath == "/pages/milton-office-directory") {
+                        return "Office Directory"
+                    } else if(this.$route.fullPath == "/pages/milton-leasing") {
                         return "Leasing"
                     } else if(this.$route.fullPath == "/pages/milton-privacy-policy") {
                         return "Privacy Policy"
