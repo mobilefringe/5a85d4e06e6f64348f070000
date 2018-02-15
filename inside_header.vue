@@ -69,6 +69,8 @@
                         return "Office Directory"
                     } else if(this.$route.fullPath == "/pages/milton-leasing") {
                         return "Leasing"
+                    } else if(this.$route.fullPath == "/pages/milton-about-us") {
+                        return "About Us"
                     } else if(this.$route.fullPath == "/pages/milton-privacy-policy") {
                         return "Privacy Policy"
                     } else {
