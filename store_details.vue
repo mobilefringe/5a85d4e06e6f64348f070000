@@ -16,7 +16,7 @@
                         <div class="col-md-8">
                             <p class="store_details_phone">
                                 <span v-if="currentStore.phone">{{ currentStore.phone}}</span>
-                                <span v-if="currentStore.website"> | <a :href="'htpps://' + currentStore.website" target="_blank">Visit Website</a></span>
+                                <span v-if="currentStore.website"> | <a :href="'https://' + currentStore.website" target="_blank">Visit Website</a></span>
                             </p>
                         </div>
                         <div class="col-md-4 text-right hidden_phone">
