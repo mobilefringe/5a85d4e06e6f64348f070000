@@ -154,76 +154,109 @@
     </div>
 </template>
 <script>
-    define(["Vue", "vuex", "vue-meta", "vee-validate"], function (Vue, Vuex, Meta, VeeValidate) {
+    define(["Vue", "vuex", "moment", "moment-timezone", "vue-moment", "vue-meta", 'vee-validate',"v-calendar",'utility', 'jquery'], function(Vue, Vuex, moment, tz, VueMoment, Meta, VeeValidate,VCalendar, Utility, $) {
         Vue.use(Meta);
         Vue.use(VeeValidate);
-        return Vue.component("contact-component", {
+        Vue.use(VCalendar.default);
+        return Vue.component("community-component", {
             template: template, // the variable template will be injected
-            data: function data() {
+            data: function() {
                 return {
-                    dataLoaded: false,
                     form_data: {},
-                    loginPending: null,
                     formSuccess: false,
                     formError: false,
-                    time: new Date()
+                    validaNum: '',
+                    correctValNum: null,
+                    validNumError: false,
+                    currentPage: null
                 }
             },
-            created() {
-                this.loadData().then(response => {
-                    this.currentPage = response[0].data;
-                    this.dataLoaded = true;
+            beforeRouteEnter(to, from, next) {
+                next(vm => {
+                    host_name = vm.property.mm_host.replace("http:", "");
+                    // access to component instance via `vm`
+                    vm.$store.dispatch('LOAD_PAGE_DATA', {
+                        url: host_name + "/pages/eastgate-community.json"
+                    }).then(response => {
+                        vm.currentPage = response.data;
+                    }, error => {
+                        console.error("Could not retrieve data from server. Please check internet connection and try again.");
+                        vm.$router.replace({ path: '/'});
+                    });
+                })
+            },
+            beforeRouteUpdate(to, from, next) {
+                host_name = this.property.mm_host.replace("http:", "");
+                this.$store.dispatch('LOAD_PAGE_DATA', {
+                    url: host_name + "/pages/eastgate-community.json"
+                }).then(response => {
+                    this.currentPage = response.data;
+                }, error => {
+                    console.error("Could not retrieve data from server. Please check internet connection and try again.");
+                    this.$router.replace({ path: '/'});
                 });
+            },
+            mounted() {
+                //creating random validation num 
+                this.correctValNum = Utility.rannumber();//this.rannumber;
             },
             computed: {
                 ...Vuex.mapGetters([
-                    'property'
-                ])
+                    'property',
+                    'timezone'
+                ]),
             },
             methods: {
-                loadData: async function () {
-                    try {
-                        let results = await Promise.all([this.$store.dispatch('LOAD_PAGE_DATA', {url: this.property.mm_host + "/pages/milton-contact-us.json"})]);
-                        return results;
-                    } catch (e) {
-                        console.log("Error loading data: " + e.message);
-                    }
-                },
                 validateBeforeSubmit() {
+                    this.validNumError = false;
                     this.$validator.validateAll().then((result) => {
-                        if (result) {
+                        if (result && (this.correctValNum === this.validaNum)) {
                             let errors = this.errors;
+                            //format email
                             send_data = {};
-                            send_data.form_data = JSON.stringify(this.serializeObject(this.form_data));
-                            this.$store.dispatch("CONTACT_US", send_data).then(res => {
-                                this.formSuccess = true;
-                            }).catch(error => {
-                                try {
-                                    if (error.response.status == 401) {
-                                        console.log("Data load error: " + error.message);
-                                        this.formError = true;
-                                    } else {
-                                        console.log("Data load error: " + error.message);
-                                        this.formError = true;
-                                    }
-                                } catch (e) {
-                                    console.log("Data load error: " + error.message);
-                                    this.formError = true;
+                            send_data.url = "http://www.mallmaverick.com/send_contact_email";
+                            var formatted_formdata = {}; //JSON.stringify(this.serializeObject(this.form_data));
+                            formatted_formdata.send_to = "BMiele@Bentallkennedy.com,kkelly@bentallkennedy.com";
+                            formatted_formdata.subject = "Eastgate Community Rental Form Application"; 
+                            formatted_formdata.body = {};
+                            formatted_formdata.body["Legal Name of Organization"] =  this.form_data.legalName;
+                            formatted_formdata.body["Operating Name of Organization(if different)"] =  this.form_data.operatingName, 
+                            formatted_formdata.body["Description of Organization"] =   this.form_data.description, 
+                            formatted_formdata.body["Street Address"] = this.form_data.street,
+                            formatted_formdata.body["Town/City"] = this.form_data.city, 
+                            formatted_formdata.body["Postal Code" ] =  this.form_data.postal, 
+                            formatted_formdata.body["Email Address"] = this.form_data.email, 
+                            formatted_formdata.body["Telephone Number"] =  this.form_data.phone, 
+                            formatted_formdata.body["Fax Number"] =  this.form_data.fax,
+                            formatted_formdata.body["Authorized Contact Person"] = this.form_data.contactName,
+                            formatted_formdata.body["Name of Insurer"] =  this.form_data.insurer,
+                            formatted_formdata.body["Charitable # (BN/Registration Number)"] =  this.form_data.cnpNum,
+                            formatted_formdata.body["Lottery License # (If applicable)"] =   this.form_data.lLicense,
+                            formatted_formdata.body["From Date(mm/dd/yyyy)"] =  this.form_data.fromDate,
+                            formatted_formdata.body["To Date(mm/dd/yyyy)"] =  this.form_data.toDate,
+                            formatted_formdata.body["Purpose for use of in-mall space"] =  this.form_data.purpose,
+                            formatted_formdata.body["Please specify any other requirements"] =  this.form_data.requirement,
+                            formatted_formdata.body[ "Anticipated Attendance"] =  this.form_data.aAttendance;
+                            send_data.form_data = Utility.serializeObject(formatted_formdata);
+                            var vm = this;
+                            $.ajax({
+                                url : send_data.url,
+                                type: "POST",
+                                data : formatted_formdata,
+                                success: function(data, textStatus, jqXHR)
+                                {
+                                    vm.formSuccess = true;
+                                },
+                                error: function (jqXHR, textStatus, errorThrown)
+                                {
+                                   console.log("Data load error: " + error.message);
+                                   vm.formError = true;
                                 }
-                            })
+                            });
                         }
+
                     })
                 },
-                serializeObject(obj) {
-                    var newObj = [];
-                    _.forEach(obj, function (value, key) {
-                        var tempVal = {};
-                        tempVal.name = key;
-                        tempVal.value = value;
-                        newObj.push(tempVal);
-                    });
-                    return newObj;
-                }
             }
         });
     });
