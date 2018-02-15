@@ -45,6 +45,12 @@
                         </div>
                         <div class="col-md-4">
                             <p class="store_details_hours">Store Hours</p>
+                            <ul>
+                                <li v-for="hour in hours">
+                                    {{hour.day_of_week | moment("dddd", timezone)}} - {{hour.open_time | moment("h A", timezone)}} - {{hour.close_time | moment("h A", timezone)}}
+                                    </span>
+                                </li>
+                            </ul>
                         </div>
                     </div>
                 </div>
