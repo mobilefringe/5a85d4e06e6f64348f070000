@@ -128,7 +128,7 @@
     								<span v-if="validaNum.length === 6 && validaNum !== correctValNum && errors.first('validate') == null" class="form-control-feedback" :class="{shake_element : validNumError}">Please enter correct number</span>
     							</div>
     						</div>
-    						<div class="form-group account-btn text-left m-t-10">
+    						<div class="form-group">
     							<div class="col-xs-12">
     								<button class="animated_btn" type="submit" :disabled="formSuccess">Submit</button>
     							</div>
