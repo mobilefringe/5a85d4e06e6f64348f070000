@@ -172,31 +172,31 @@
                     currentPage: null
                 }
             },
-            beforeRouteEnter(to, from, next) {
-                next(vm => {
-                    host_name = vm.property.mm_host.replace("http:", "");
-                    // access to component instance via `vm`
-                    vm.$store.dispatch('LOAD_PAGE_DATA', {
-                        url: host_name + "/pages/eastgate-community.json"
-                    }).then(response => {
-                        vm.currentPage = response.data;
-                    }, error => {
-                        console.error("Could not retrieve data from server. Please check internet connection and try again.");
-                        vm.$router.replace({ path: '/'});
-                    });
-                })
-            },
-            beforeRouteUpdate(to, from, next) {
-                host_name = this.property.mm_host.replace("http:", "");
-                this.$store.dispatch('LOAD_PAGE_DATA', {
-                    url: host_name + "/pages/eastgate-community.json"
-                }).then(response => {
-                    this.currentPage = response.data;
-                }, error => {
-                    console.error("Could not retrieve data from server. Please check internet connection and try again.");
-                    this.$router.replace({ path: '/'});
-                });
-            },
+            // beforeRouteEnter(to, from, next) {
+            //     next(vm => {
+            //         host_name = vm.property.mm_host.replace("http:", "");
+            //         // access to component instance via `vm`
+            //         vm.$store.dispatch('LOAD_PAGE_DATA', {
+            //             url: host_name + "/pages/eastgate-community.json"
+            //         }).then(response => {
+            //             vm.currentPage = response.data;
+            //         }, error => {
+            //             console.error("Could not retrieve data from server. Please check internet connection and try again.");
+            //             vm.$router.replace({ path: '/'});
+            //         });
+            //     })
+            // },
+            // beforeRouteUpdate(to, from, next) {
+            //     host_name = this.property.mm_host.replace("http:", "");
+            //     this.$store.dispatch('LOAD_PAGE_DATA', {
+            //         url: host_name + "/pages/eastgate-community.json"
+            //     }).then(response => {
+            //         this.currentPage = response.data;
+            //     }, error => {
+            //         console.error("Could not retrieve data from server. Please check internet connection and try again.");
+            //         this.$router.replace({ path: '/'});
+            //     });
+            // },
             created() {
                 this.loadData().then(response => {
                     this.currentPage = response[0].data;
