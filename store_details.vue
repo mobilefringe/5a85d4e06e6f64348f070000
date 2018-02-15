@@ -40,14 +40,6 @@
                     </div>
                     <div class="margin_40"></div>
                     <div class="row">
-                        <div class="col-md-8 margin_30">
-                            <div class="store_details_desc" v-html="currentStore.rich_description"></div>
-                        </div>
-                        <div class="hidden-lg hidden-md visible-sm-block visible-xs-block">
-                            <div class="col-md-12">
-                                <hr>    
-                            </div>
-                        </div>
                         <div class="col-md-4">
                             <p class="store_details_hour_title">Store Hours</p>
                             <ul class="store_details_hours">
@@ -56,6 +48,14 @@
                                     </span>
                                 </li>
                             </ul>
+                        </div>
+                        <div class="hidden-lg hidden-md visible-sm-block visible-xs-block">
+                            <div class="col-md-12">
+                                <hr>    
+                            </div>
+                        </div>
+                        <div class="col-md-8 margin_30">
+                            <div class="store_details_desc" v-html="currentStore.rich_description"></div>
                         </div>
                     </div>
                 </div>
