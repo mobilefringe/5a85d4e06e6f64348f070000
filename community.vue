@@ -8,7 +8,7 @@
             <div v-if="dataLoaded" v-cloak class="main_container margin_30">
                 <div class="row">
     				<div class="col-sm-12 contact_contents">
-    					<div class="description_text text_left" v-if="currentPage" v-html="currentPage.body"></div>
+    					<div class="margin_40" v-if="currentPage" v-html="currentPage.body"></div>
     					<form class="form-horizontal padding_top_20" action="form-submit" v-on:submit.prevent="validateBeforeSubmit">
     						<div class="page_header all_caps double_border_top double_border_bottom">
     							<h3 class="hours_heading caps">Business Contact Info</h3>
