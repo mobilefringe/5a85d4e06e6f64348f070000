@@ -254,20 +254,17 @@
                                 url : send_data.url,
                                 type: "POST",
                                 data : formatted_formdata,
-                                success: function(data, textStatus, jqXHR)
-                                {
+                                success: function(data, textStatus, jqXHR){
                                     vm.formSuccess = true;
                                 },
-                                error: function (jqXHR, textStatus, errorThrown)
-                                {
+                                error: function (jqXHR, textStatus, errorThrown){
                                    console.log("Data load error: " + error.message);
                                    vm.formError = true;
                                 }
                             });
                         }
-
                     })
-                },
+                }
             }
         });
     });
