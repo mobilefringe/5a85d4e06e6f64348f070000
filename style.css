@@ -304,7 +304,7 @@ header {
 	width: 120px;
 }
 #primary_nav ul ul a {
-	padding: 10px 15px;
+	padding: 10px 5px;
 	line-height: 120%;
 }
 #primary_nav ul .menu_item:hover > ul {
