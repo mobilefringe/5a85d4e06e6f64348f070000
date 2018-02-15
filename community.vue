@@ -151,10 +151,9 @@
     </div>
 </template>
 <script>
-    define(["Vue", "vuex", "moment", "moment-timezone", "vue-moment", "vue-meta", 'vee-validate',"v-calendar",'utility', 'jquery'], function(Vue, Vuex, moment, tz, VueMoment, Meta, VeeValidate,VCalendar, Utility, $) {
+    define(["Vue", "vuex", "vue-meta", "moment", "moment-timezone", "vue-moment", "jquery", "vee-validate", "utility"], function(Vue, Vuex, Meta, moment, tz, VueMoment, $, VeeValidate, Utility) {
         Vue.use(Meta);
         Vue.use(VeeValidate);
-        Vue.use(VCalendar.default);
         return Vue.component("community-component", {
             template: template, // the variable template will be injected
             data: function() {
@@ -228,8 +227,8 @@
                             send_data = {};
                             send_data.url = "http://www.mallmaverick.com/send_contact_email";
                             var formatted_formdata = {}; //JSON.stringify(this.serializeObject(this.form_data));
-                            formatted_formdata.send_to = "BMiele@Bentallkennedy.com,kkelly@bentallkennedy.com";
-                            formatted_formdata.subject = "Eastgate Community Rental Form Application"; 
+                            formatted_formdata.send_to = "caitlin@mobilefringe.com";
+                            formatted_formdata.subject = "Milton Mall Community Rental Form Application"; 
                             formatted_formdata.body = {};
                             formatted_formdata.body["Legal Name of Organization"] =  this.form_data.legalName;
                             formatted_formdata.body["Operating Name of Organization(if different)"] =  this.form_data.operatingName, 
