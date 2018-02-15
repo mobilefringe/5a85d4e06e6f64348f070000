@@ -90,6 +90,7 @@
             computed: {
                 ...Vuex.mapGetters([
                     'property',
+                    'timezone',
                     'stores',
                     'findStoreBySlug',
                     'findCategoryById',
