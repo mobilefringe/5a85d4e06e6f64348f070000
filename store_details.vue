@@ -46,7 +46,7 @@
                         <div class="col-md-4">
                             <p class="store_details_hours">Store Hours</p>
                             <ul>
-                                <li v-for="hour in hours">
+                                <li v-for="hour in storeHours">
                                     {{hour.day_of_week | moment("dddd", timezone)}} - {{hour.open_time | moment("h A", timezone)}} - {{hour.close_time | moment("h A", timezone)}}
                                     </span>
                                 </li>
@@ -69,7 +69,8 @@
                 return {
                     dataLoaded: false,
                     currentStore: null,
-                    map: null
+                    map: null,
+                    hours: []
                 }
             },
             props:['id'],
@@ -85,14 +86,23 @@
                 $route: function () {
                     this.updateCurrentStore(this.$route.params.id);
                 },
-                // map : function (){
-                    
-                //         var vm = this;
-                //         setTimeout(function () {
-                //             vm.dropPin();
-                //         }, 500);
-                   
-                // }
+                currentStore: function () {
+                    var vm = this;
+                    var storeHours = [];
+                    _.forEach(this.currentStore.store_hours, function (value, key) {
+                        storeHours.push(vm.findHourById(value));
+                    });
+                    this.hours = storeHours;
+
+                    // if(this.currentStore.category_name != null) {
+                    //     var category_name = this.currentStore.category_name
+                    //     if(category_name == "NorthPark Cafés" || category_name == "Restaurants / Beverages" || category_name == "Specialty Foods"){
+                    //         this.isDine = true;
+                    //     } else {
+                    //         this.isDine = false;
+                    //     }    
+                    // }
+                },
             },
             computed: {
                 ...Vuex.mapGetters([
@@ -105,6 +115,14 @@
                     var currentStoreCategory = this.currentStore.categories[0];
                     category = this.findCategoryById(currentStoreCategory)
                     return category.name
+                },
+                storeHours() {
+                    var vm = this;
+                    var storeHours = [];
+                    _.forEach(this.currentStore.store_hours, function (value, key) {
+                        storeHours.push(vm.findHourById(value));
+                    });
+                    return storeHours;    
                 },
                 getSVGurl () {
                     return "https://www.mallmaverick.com" + this.property.svgmap_url;
