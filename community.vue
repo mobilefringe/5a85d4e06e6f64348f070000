@@ -11,7 +11,7 @@
     					<div class="description_text text_left" v-if="currentPage" v-html="currentPage.body"></div>
     					<form class="form-horizontal padding_top_20" action="form-submit" v-on:submit.prevent="validateBeforeSubmit">
     						<div class="page_header all_caps double_border_top double_border_bottom">
-    							<div class="page_container text_left">Business Contact Info</div>
+    							<h3 class="hours_heading caps">Business Contact Info</h3>
     						</div>
     						<div class="form-group ">
     							<div class="col-sm-6 col-xs-12" :class="{'has-error': errors.has('legalName')}">
@@ -70,7 +70,7 @@
     							</div>
     						</div>
     						<div class="page_header all_caps double_border_top double_border_bottom">
-    							<div class="page_container text_left">Contact Info</div>
+    							<h3 class="hours_heading caps">Contact Info</h3>
     						</div>
     						<div class="form-group ">
     							<div class="col-sm-6 col-xs-12" :class="{'has-error': errors.has('contactName')}">
