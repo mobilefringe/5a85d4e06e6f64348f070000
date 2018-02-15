@@ -10,10 +10,8 @@
     				<div class="col-sm-12 contact_contents">
     					<div class="margin_40" v-if="currentPage" v-html="currentPage.body"></div>
     					<form class="form-horizontal padding_top_20" action="form-submit" v-on:submit.prevent="validateBeforeSubmit">
-    						<div class="page_header all_caps double_border_top double_border_bottom">
-    							<h3 class="hours_heading caps">Business Contact Info</h3>
-    							<hr>
-    						</div>
+							<h3 class="hours_heading caps">Business Contact Info</h3>
+							<hr>
     						<div class="form-group ">
     							<div class="col-sm-6 col-xs-12" :class="{'has-error': errors.has('legalName')}">
     								<label for="legalName">Legal Name of Organization<span class="req_star"> *</span></label>
@@ -49,7 +47,6 @@
     									<span v-show="errors.has('postal')" class="form-control-feedback">{{ errors.first('postal') }}</span>
     								</div>
     							</div>
-    							
     						</div>
     						<div class="form-group">
     							<div class="col-sm-6 col-xs-12" :class="{'has-error': errors.has('email')}">
@@ -70,10 +67,8 @@
     								</div>
     							</div>
     						</div>
-    						<div class="page_header all_caps double_border_top double_border_bottom">
-    							<h3 class="hours_heading caps">Contact Info</h3>
-    							<hr>
-    						</div>
+							<h3 class="hours_heading caps">Contact Info</h3>
+							<hr>
     						<div class="form-group ">
     							<div class="col-sm-6 col-xs-12" :class="{'has-error': errors.has('contactName')}">
     								<label for="contactName">Authorized Contact Person<span class="req_star"> *</span></label>
