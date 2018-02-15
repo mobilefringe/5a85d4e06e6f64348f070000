@@ -45,8 +45,8 @@
                             <div class="store_details_desc" v-html="currentStore.rich_description"></div>
                         </div>
                         <div class="col-md-4">
-                            <p class="store_details_hours">Store Hours</p>
-                            <ul>
+                            <p class="store_details_hour_title">Store Hours</p>
+                            <ul class="store_details_hours">
                                 <li v-for="hour in storeHours">
                                     {{hour.day_of_week | moment("dddd", timezone)}} - {{hour.open_time | moment("h A", timezone)}} - {{hour.close_time | moment("h A", timezone)}}
                                     </span>
