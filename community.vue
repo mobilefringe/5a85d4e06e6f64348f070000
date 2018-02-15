@@ -31,21 +31,23 @@
     								<span v-show="errors.has('description')" class="form-control-feedback">{{ errors.first('description') }}</span>
     							</div>
     							<div class="col-sm-6 col-xs-12 no_padding" >
-    								<div class="col-xs-12" :class="{'has-error': errors.has('street')}">
-    									<label for="street">Street Address<span class="req_star"> *</span></label>
-    									<input v-model="form_data.street" v-validate="'required:true'" class="form-control" :class="{'input': true}" name="street" type="text" placeholder="Street Address" data-vv-delay="500" data-vv-as="Street Address">
-    									<span v-show="errors.has('street')" class="form-control-feedback">{{ errors.first('street') }}</span>
-    								</div>
-    								<div class="col-sm-6 col-xs-12 " :class="{'has-error': errors.has('city')}" style="padding-top: 20px;">
-    									<label for="city">Town/ City<span class="req_star"> *</span></label>
-    									<input v-model="form_data.city" v-validate="'required:true'" class="form-control" :class="{'input': true}" name="city" type="text" placeholder="Town/City" data-vv-delay="500" data-vv-as="City">
-    									<span v-show="errors.has('city')" class="form-control-feedback">{{ errors.first('city') }}</span>
-    								</div>
-    								<div class="col-sm-6 col-xs-12 " :class="{'has-error': errors.has('postal')}"  style="padding-top: 20px;">
-    									<label for="postal">Postal Code<span class="req_star"> *</span></label>
-    									<input v-model="form_data.postal" v-validate="'required:true'" class="form-control" :class="{'input': true}" name="postal" type="text" placeholder="Postal Code" data-vv-delay="500" data-vv-as="Postal Code">
-    									<span v-show="errors.has('postal')" class="form-control-feedback">{{ errors.first('postal') }}</span>
-    								</div>
+    							    <div class="row">
+        								<div class="col-xs-12" :class="{'has-error': errors.has('street')}">
+        									<label for="street">Street Address<span class="req_star"> *</span></label>
+        									<input v-model="form_data.street" v-validate="'required:true'" class="form-control" :class="{'input': true}" name="street" type="text" placeholder="Street Address" data-vv-delay="500" data-vv-as="Street Address">
+        									<span v-show="errors.has('street')" class="form-control-feedback">{{ errors.first('street') }}</span>
+        								</div>
+        								<div class="col-sm-6 col-xs-12 " :class="{'has-error': errors.has('city')}" style="padding-top: 20px;">
+        									<label for="city">Town/ City<span class="req_star"> *</span></label>
+        									<input v-model="form_data.city" v-validate="'required:true'" class="form-control" :class="{'input': true}" name="city" type="text" placeholder="Town/City" data-vv-delay="500" data-vv-as="City">
+        									<span v-show="errors.has('city')" class="form-control-feedback">{{ errors.first('city') }}</span>
+        								</div>
+        								<div class="col-sm-6 col-xs-12 " :class="{'has-error': errors.has('postal')}"  style="padding-top: 20px;">
+        									<label for="postal">Postal Code<span class="req_star"> *</span></label>
+        									<input v-model="form_data.postal" v-validate="'required:true'" class="form-control" :class="{'input': true}" name="postal" type="text" placeholder="Postal Code" data-vv-delay="500" data-vv-as="Postal Code">
+        									<span v-show="errors.has('postal')" class="form-control-feedback">{{ errors.first('postal') }}</span>
+        								</div>
+        							</div>
     							</div>
     						</div>
     						<div class="form-group">
