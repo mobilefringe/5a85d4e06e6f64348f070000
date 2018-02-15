@@ -1243,9 +1243,14 @@ footer {
         font-size: 20px !important;
         line-height: 27px !important;
     }
-    .store_details_hours {
+    .store_details_hour_title {
         font-size: 20px;
         line-height: 27px;
+    }
+    .store_details_hours {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
     }
 }
 
