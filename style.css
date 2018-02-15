@@ -303,6 +303,9 @@ header {
 #primary_nav ul ul .submenu_item {
 	width: 130px;
 }
+#primary_nav ul #dropDown1 ul .submenu_item {
+    width: 168px;
+}
 #primary_nav ul ul a {
 	padding: 10px 5px;
 	line-height: 120%;
