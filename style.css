@@ -1153,7 +1153,7 @@ footer {
     border-right: 1px solid #979797;
 }
 .stores_container {
-    // max-height: 2400px;
+    max-height: 2400px;
     // display: -webkit-box;
     // display: -webkit-flex;
     // display: -ms-flexbox;
