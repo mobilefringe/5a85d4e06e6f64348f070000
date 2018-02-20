@@ -1168,7 +1168,7 @@ footer {
     flex-wrap: wrap;
 }
 .store_col_count {
-    column-count: 2;
+    // column-count: 2;
     
     display: flex;
     flex-direction: column;
