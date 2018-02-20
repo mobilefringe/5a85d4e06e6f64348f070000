@@ -1168,15 +1168,24 @@ footer {
     flex-wrap: wrap;
 }
 .store_col_count {
-    // column-count: 2;
     padding: 0;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
     flex-direction: column;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
-    
+    -webkit-box-align: left;
+    -webkit-align-items: left;
+    -ms-flex-align: left;
     align-items: left;
     float: none;
-    
     .store_index_container {
         padding: 0 15px;
         width: 50%;
