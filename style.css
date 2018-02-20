@@ -1179,7 +1179,7 @@ footer {
     
     .store_index_container {
         padding: 0 15px;
-        width: calc(50% - 30px);
+        width: 50%;
     }
 }
 .store_initial_container {
