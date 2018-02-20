@@ -47,7 +47,13 @@
                 <div class="hidden-lg hidden-md visible-sm-block visible-xs-block">
                     <div class="row hidden-lg hidden-md visible-sm-block visible-xs-block">
                         <div class="col-md-12 mobile_store_select">
-                            <v-select :options="allStores" :placeholder="'Select A Store'" :searchable="false" :label="'name'" :on-change="dropPin"></v-select> 
+                            <v-select 
+                                :options="allStores" 
+                                :placeholder="'Select A Store'" 
+                                :searchable="false" 
+                                :label="'name'" 
+                                :on-change="dropPin"
+                            ></v-select> 
                         </div>
                     </div>
                     <div class="row">
