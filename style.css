@@ -1177,7 +1177,7 @@ footer {
     align-items: left;
     float: none;
     
-    div {
+    .store_index_container {
         width: calc(50% - 30px);
     }
 }
