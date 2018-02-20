@@ -32,8 +32,8 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="store-section" >
-                                    <p class="store_list_name" v-for="store in stores">
+                                <div class="store_list_name" v-for="store in stores">
+                                    <p > <!-- class="store_list_name" v-for="store in stores" -->
                                         <router-link :to="{ name: 'storeDetails', params: { id: store.slug }}">
                                             {{store.name}}
                                         </router-link>
