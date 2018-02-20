@@ -1212,31 +1212,32 @@ footer {
 }
 .store_list_name {
     margin: 0;
+    margin-bottom: 10px;
     font-size: 18px;
-    line-height: 38px;
+    line-height: normal;
 }
 .new_store {
     margin-left: 5px;
-    padding: 4px 6px;
+    padding: 3px 6px;
     background: #f00;
     font-size: 13px;
-    line-height: 13px;
+    // line-height: 13px;
     color: #fff;
 }
 .coming_soon_store {
     margin-left: 5px;
-    padding: 4px 6px;
+    padding: 3px 6px;
     background: #fe9b33;
     font-size: 13px;
-    line-height: 13px;
+    // line-height: 13px;
     color: #fff;
 }
 .promo_exist {
     margin-left: 5px;
-    padding: 4px 6px;
+    padding: 3px 6px;
     background: #008000;
     font-size: 13px;
-    line-height: 13px;
+    // line-height: 13px;
     color: #fff;
 }
 
