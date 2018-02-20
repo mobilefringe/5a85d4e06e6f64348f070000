@@ -1169,6 +1169,17 @@ footer {
 }
 .store_col_count {
     column-count: 2;
+    
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    
+    align-items: left;
+    float: none;
+    
+    div {
+        width: calc(50% - 30px);
+    }
 }
 .store_initial_container {
     color: #fff;
