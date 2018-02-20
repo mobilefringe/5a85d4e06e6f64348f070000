@@ -24,7 +24,7 @@
                     </div>
                     <div class="row stores_container">
                         <div class="col-md-12" :class="{ store_col_count: breakIntoCol }">
-                            <div v-for="(stores, index) in filteredStores" v-if="listMode === 'alphabetical'">
+                            <div class="store_index_container" v-for="(stores, index) in filteredStores" v-if="listMode === 'alphabetical'">
                                 <div class="list_header">
                                     <div class="store_initial_container">
                                         <div class="store_initial_box">
