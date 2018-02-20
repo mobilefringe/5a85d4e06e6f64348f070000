@@ -1154,18 +1154,18 @@ footer {
 }
 .stores_container {
     max-height: 2400px;
-    // display: -webkit-box;
-    // display: -webkit-flex;
-    // display: -ms-flexbox;
-    // display: flex;
-    // -webkit-box-orient: vertical;
-    // -webkit-box-direction: normal;
-    // -webkit-flex-direction: column;
-    // -ms-flex-direction: column;
-    // flex-direction: column;
-    // -webkit-flex-wrap: wrap;
-    // -ms-flex-wrap: wrap;
-    // flex-wrap: wrap;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
 }
 .store_col_count {
     padding: 0;
