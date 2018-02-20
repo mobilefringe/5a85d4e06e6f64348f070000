@@ -1178,13 +1178,14 @@ footer {
     margin-top: 20px;
     border-bottom: 2px solid #000;
     .store_initial_box {
-        padding: 3% 4%;
-        // width: 50px;
-        // height: 50px;
+        padding: 12px;
+        min-width: 50px;
+        max-height: 50px;
         display: inline-block;
         background: #000;
+        text-align: center;
         span {
-            
+            line-height: normal;    
         }
     }
 }
