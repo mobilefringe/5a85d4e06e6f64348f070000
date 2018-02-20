@@ -22,7 +22,7 @@
                             <v-select v-if="dropDownCats" v-model="selectedCat" :options="dropDownCats" :searchable="false" :on-change="filteredByCategory" class="category-select" :placeholder="$t('stores_page.sort_by_cats')" id="selectByCat"></v-select>
                         </div>
                     </div>
-                    <div class="row stores_container">
+                    <div class="row">
                         <div class="col-md-12" :class="{ store_col_count: breakIntoCol }">
                             <div class="store_index_container" v-for="(stores, index) in filteredStores" v-if="listMode === 'alphabetical'">
                                 <div class="list_header">
