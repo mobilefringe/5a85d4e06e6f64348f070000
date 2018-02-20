@@ -1169,7 +1169,7 @@ footer {
 }
 .store_col_count {
     // column-count: 2;
-    
+    padding: 0;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -1178,6 +1178,7 @@ footer {
     float: none;
     
     .store_index_container {
+        padding: 0 15px;
         width: calc(50% - 30px);
     }
 }
