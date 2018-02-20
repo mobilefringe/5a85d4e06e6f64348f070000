@@ -19,16 +19,7 @@
                             <a class="store_nav_link" v-on:click="changeMode('alphabetical')">Alphabetical</a>
                         </div>
                         <div class="col-md-3">
-                            <v-select 
-                                v-if="dropDownCats" 
-                                v-model="selectedCat" 
-                                :options="dropDownCats" 
-                                :searchable="false" 
-                                :on-change="filteredByCategory" 
-                                class="category-select" :
-                                placeholder="$t('stores_page.sort_by_cats')" 
-                                id="selectByCat"
-                            ></v-select>
+                            <v-select v-if="dropDownCats" v-model="selectedCat" :options="dropDownCats" :searchable="false" :on-change="filteredByCategory" class="category-select" :placeholder="$t('stores_page.sort_by_cats')" id="selectByCat"></v-select>
                         </div>
                     </div>
                     <div class="row">
@@ -56,13 +47,7 @@
                 <div class="hidden-lg hidden-md visible-sm-block visible-xs-block">
                     <div class="row hidden-lg hidden-md visible-sm-block visible-xs-block">
                         <div class="col-md-12 mobile_store_select">
-                            <v-select 
-                                :options="allStores" 
-                                :placeholder="'Select A Store'" 
-                                :searchable="false" 
-                                :label="'name'" 
-                                :on-change="dropPin"
-                            ></v-select> 
+                            <v-select :options="allStores" :placeholder="'Select A Store'" :searchable="false" :label="'name'" :on-change="dropPin"></v-select> 
                         </div>
                     </div>
                     <div class="row">
