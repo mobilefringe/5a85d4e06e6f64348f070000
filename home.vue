@@ -13,7 +13,8 @@
                             </router-link>
                             <!--<div v-else class="banner_image" v-bind:style="{ backgroundImage: 'url(' + banner.image_url + ')' }"></div>-->
                             <div v-else class="banner_image" v-bind:style="{ backgroundImage: 'url(//codecloud.cdn.speedyrails.net/sites/5a85d4e06e6f64348f070000/image/jpeg/1519665623000/home2.jpg)' }"></div>
-                        
+                              <!--<div v-else class="banner_image" v-bind:style="{ backgroundImage: 'url(' + banner.image_url + ')' }"></div>-->
+                            <div v-else class="banner_image" v-bind:style="{ backgroundImage: 'url(//codecloud.cdn.speedyrails.net/sites/5a85d4e06e6f64348f070000/image/jpeg/1519665619000/home3.jpg)' }"></div>
                         </div>
                     </slick>
                     <div class="home_banner_wrapper">
