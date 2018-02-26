@@ -14,13 +14,13 @@
                         <!--</div>-->
                         
                         <!-- STATIC BANNERS -->
-                        <!--<div>-->
-                            <div class="banner_image" v-bind:style="{ backgroundImage: 'url(//codecloud.cdn.speedyrails.net/sites/5a85d4e06e6f64348f070000/image/jpeg/1519665627000/home1.jpg)' }"></div>
+                        <div class="banner_image" v-bind:style="{ backgroundImage: 'url(//codecloud.cdn.speedyrails.net/sites/5a85d4e06e6f64348f070000/image/jpeg/1519665627000/home1.jpg)' }"></div>
+                    
+                        <div class="banner_image" v-bind:style="{ backgroundImage: 'url(//codecloud.cdn.speedyrails.net/sites/5a85d4e06e6f64348f070000/image/jpeg/1519665623000/home2.jpg)' }"></div>
+                    
+                        <div class="banner_image" v-bind:style="{ backgroundImage: 'url(//codecloud.cdn.speedyrails.net/sites/5a85d4e06e6f64348f070000/image/jpeg/1519665619000/home3.jpg)' }"></div>
+                        <!-- *** -->
                         
-                            <div class="banner_image" v-bind:style="{ backgroundImage: 'url(//codecloud.cdn.speedyrails.net/sites/5a85d4e06e6f64348f070000/image/jpeg/1519665623000/home2.jpg)' }"></div>
-                        
-                            <div class="banner_image" v-bind:style="{ backgroundImage: 'url(//codecloud.cdn.speedyrails.net/sites/5a85d4e06e6f64348f070000/image/jpeg/1519665619000/home3.jpg)' }"></div>
-                        <!--</div>-->
                     </slick>
                     <div class="home_banner_wrapper">
                         <div class="home_hours">
