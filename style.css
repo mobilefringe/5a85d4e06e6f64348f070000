@@ -96,6 +96,9 @@ hr{
 .open_menu{
     display:none;
 }
+.img_width {
+    max-width: 100%;
+}
 /* *** LOADING *** */
 .loading-container {
     //margin: 20% 0;
