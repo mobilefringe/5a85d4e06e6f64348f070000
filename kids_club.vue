@@ -58,7 +58,7 @@
     						<div>
     						    <div class="col-xs-12 margin_40">
     						        <label class="checkbox">
-                                        <input name="newsletter" required type="checkbox" >
+                                        <input v-model="form_data.newsletter" name="newsletter" required type="checkbox" >
                                         Yes, I would like to receive ongoing news related to events, promotions and special announcements from Milton Monkeys Kids' Club
                                     </label>
                                     <label class="checkbox">
