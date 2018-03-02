@@ -57,8 +57,8 @@
                                         Yes, I would like to receive ongoing news related to events, promotions and special announcements from Milton Monkeys Kids' Club
                                     </label>
                                     <label class="checkbox">
-                                        <input name="agree_terms" required type="checkbox" >
-                                        I agree to the <a href="https://www.morguard.com/privacy/">Privacy Policy</a>.
+                                        <input name="privacy_policy" required type="checkbox" >
+                                        I agree to the <a href="/pages/milton-privacy-policy" target="_blank">Privacy Policy</a>.
                                     </label>
     						    </div>
     							<div class="col-xs-12" style="margin-top: 20px;padding: 0;">
