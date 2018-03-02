@@ -8,8 +8,8 @@
             <div v-if="dataLoaded" v-cloak class="main_container margin_30">
                 <div class="row">
                     <div class="col-md-12">
-                        <div v-if="currentContest">
-                            <img class="img_width" :src="currentContest.image_url" :alt="currentContest.name">
+                        <div v-if="currentContest" class="margin_60">
+                            <img class="img_width margin_20" :src="currentContest.image_url" :alt="currentContest.name">
                             <div v-html="currentContest.rich_description"></div>
                 		</div>
                 		
