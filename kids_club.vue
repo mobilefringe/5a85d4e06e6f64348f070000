@@ -10,11 +10,7 @@
                     <div class="col-md-12">
                         <div v-if="currentContest">
                             <img :src="currentContest.image_url" :alt="currentContest.name">
-                            <div v-html="currentContest"
-                				<div class="header_content">
-                					<h1>Kids PinE-Club</h1>
-                				</div>
-                			</div>
+                            <div v-html="currentContest.rich_description"></div>
                 		</div>
                 		
                         <form class="form-horizontal padding_top_20" action="form-submit" v-on:submit.prevent="validateBeforeSubmit">
