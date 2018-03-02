@@ -8,6 +8,15 @@
             <div v-if="dataLoaded" v-cloak class="main_container margin_30">
                 <div class="row">
                     <div class="col-md-12">
+                        <div v-if="currentContest">
+                            <img :src="currentContest.image_url" alt="">
+                			<div class="site_container">
+                				<div class="header_content">
+                					<h1>Kids PinE-Club</h1>
+                				</div>
+                			</div>
+                		</div>
+                		
                         <form class="form-horizontal padding_top_20" action="form-submit" v-on:submit.prevent="validateBeforeSubmit">
     						<div class="form-group ">
     							<div class="col-sm-4 col-xs-12" :class="{'has-error': errors.has('child_first_name')}">
