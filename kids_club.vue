@@ -51,12 +51,15 @@
     							</div>
     						</div>
     						<div class="form-group account-btn text-left m-t-10 agreement">
-    						    <div class="col-xs-12">
+    						    <div class="col-sm-6 col-xs-12">
     						        <label class="checkbox">
                                         <input name="agree_terms" required type="checkbox" >
                                         Yes, I would like to receive ongoing news related to events, promotions and special announcements from Milton Monkeys Kids' Club
                                     </label>
-                                    <label class=""> <a href="https://www.morguard.com/privacy/"> Read our Privacy Policy here</a></label> 
+                                    <label class="checkbox">
+                                        <input name="agree_terms" required type="checkbox" >
+                                        I agree to the <a href="https://www.morguard.com/privacy/">Privacy Policy</a>.
+                                    </label>
     						    </div>
     							<div class="col-xs-12" style="margin-top: 20px;padding: 0;">
     								<button class="contest_btn animated_btn" type="submit" :disabled="formSuccess">Submit</button>
