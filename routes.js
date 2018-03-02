@@ -107,6 +107,20 @@ define([], function () {
             ]
         },
         {
+            path: '/kids_club',
+            component: view('default'),
+            children: [
+                {   
+                    path: '',
+                    component: view('kidsClub'),
+                    meta: {
+                        pageName: 'Kids Club',
+                    },
+                    name: 'kidsClub'
+                }
+            ]
+        },
+        {
             path: '/leasing',
             component: view('default'),
             children: [
