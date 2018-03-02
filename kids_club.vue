@@ -77,7 +77,7 @@
                         <div id="send_contact_success" class="alert alert-success text-left" role="alert" v-show="formSuccess" style="margin-top: 20px;">
                             <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
                             <span class="sr-only">Success</span>
-                            Thank you for contacting us. A member from our team will contact you shortly.
+                            Your subscription has been confirmed. You've been added to our list and will hear from us soon.
                         </div>
                         <div id="send_contact_error" class="alert alert-danger text-left" role="alert" v-show="formError" style="margin-top: 20px;">
                             <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
