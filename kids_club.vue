@@ -110,17 +110,13 @@
             created() {
                 this.loadData().then(response => {
                     this.dataLoaded = true;
-                    this.currentContest = this.findContestBySlug('pinecentre-kids-pine-club');
+                    this.currentContest = this.findContestBySlug('milton-kids-club');
                     var temp_repo = this.findRepoByName('Pages Banner');
                     if(temp_repo) {
                         this.pageBanner = temp_repo.images[0];
                     }
                     this.pageBanner = this.pageBanner;
                 });
-            },
-            mounted() {
-                //creating random validation num 
-                this.correctValNum = Utility.rannumber();
             },
             computed: {
                 ...Vuex.mapGetters([
@@ -132,20 +128,16 @@
             },
             methods: {
                 validateBeforeSubmit() {
-                    if(this.form_data.gender == null || this.form_data.gender == undefined || this.form_data.gender.length == 0){
-                        this.genderError = true;
-                    }
+                    // if(this.form_data.gender == null || this.form_data.gender == undefined || this.form_data.gender.length == 0){
+                    //     this.genderError = true;
+                    // }
                     this.$validator.validateAll().then((result) => {
                         let errors = this.errors;
                         if(this.form_data.agree_newsletter ) {
                             $.getJSON("//mobilefringe.createsend.com/t/d/s/irudui/?callback=?",
                             "cm-name=" + this.form_data.first_name + this.form_data.last_name +
                             "&cm-irudui-irudui=" + this.form_data.email +
-                            "&cm-f-jtukyu=" + this.form_data.city+
-                            "&cm-f-jtukjr=" + this.form_data.phone +
-                            "&cm-f-jtukjy=" + this.form_data.mailing_address +
                             "&cm-f-jtukjj=" + this.form_data.postal_code +
-                            "&cm-f-jtukjt=" + this.form_data.birthday,
                                 function (data) {
                                 if (data.Status === 400) {
                                     e.preventDefault();
