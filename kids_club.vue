@@ -55,7 +55,7 @@
     								<span v-show="errors.has('postal')" class="form-control-feedback">{{ errors.first('postal') }}</span>
     							</div>
     						</div>
-    						<div class="form-group">
+    						<div>
     						    <div class="col-xs-12 margin_20">
     						        <label class="checkbox">
                                         <input name="agree_terms" required type="checkbox" >
@@ -66,6 +66,8 @@
                                         I agree to the <a href="/pages/milton-privacy-policy" target="_blank">Privacy Policy</a>.
                                     </label>
     						    </div>
+    						</div>
+    						<div class="form-group">
     							<div class="col-xs-12">
     								<button class="contest_btn animated_btn" type="submit" :disabled="formSuccess">Submit</button>
     							</div>
