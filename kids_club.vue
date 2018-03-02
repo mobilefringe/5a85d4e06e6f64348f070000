@@ -49,10 +49,10 @@
     							</div>
     						</div>
     						<div class="form-group">
-    							<div class="col-sm-4 col-xs-12 " :class="{'has-error': errors.has('postal')}">
-    								<label for="postal">Postal Code <span class="req_star"> *</span></label>
-    								<input v-model="form_data.postal_code" v-validate="'required:true'" class="form-control" :class="{'input': true}" name="postal" type="text" placeholder="Postal Code" data-vv-delay="500" data-vv-as="postal code">
-    								<span v-show="errors.has('postal')" class="form-control-feedback">{{ errors.first('postal') }}</span>
+    							<div class="col-sm-4 col-xs-12 " :class="{'has-error': errors.has('postal_code')}">
+    								<label for="postal_code">Postal Code <span class="req_star"> *</span></label>
+    								<input v-model="form_data.postal_code" v-validate="'required:true'" class="form-control" :class="{'input': true}" name="postal_code" type="text" placeholder="Postal Code" data-vv-delay="500" data-vv-as="postal code">
+    								<span v-show="errors.has('postal_code')" class="form-control-feedback">{{ errors.first('v') }}</span>
     							</div>
     						</div>
     						<div>
