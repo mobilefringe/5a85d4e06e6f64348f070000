@@ -51,7 +51,7 @@
     							</div>
     						</div>
     						<div class="form-group account-btn text-left m-t-10 agreement">
-    						    <div class="col-sm-6 col-xs-12">
+    						    <div class="col-xs-12">
     						        <label class="checkbox">
                                         <input name="agree_terms" required type="checkbox" >
                                         Yes, I would like to receive ongoing news related to events, promotions and special announcements from Milton Monkeys Kids' Club
