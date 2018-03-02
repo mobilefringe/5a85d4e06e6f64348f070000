@@ -55,7 +55,7 @@
     								<span v-show="errors.has('postal')" class="form-control-feedback">{{ errors.first('postal') }}</span>
     							</div>
     						</div>
-    						<div class="form-group account-btn text-left m-t-10 agreement">
+    						<div class="form-group">
     						    <div class="col-xs-12 margin_20">
     						        <label class="checkbox">
                                         <input name="agree_terms" required type="checkbox" >
