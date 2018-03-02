@@ -111,7 +111,6 @@
                 this.loadData().then(response => {
                     this.dataLoaded = true;
                     this.currentContest = this.findContestBySlug('milton-kids-club');
-                    console.log(this.currentContest)
                 });
             },
             computed: {
