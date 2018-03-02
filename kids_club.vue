@@ -104,12 +104,7 @@
                     form_data: {},
                     formSuccess: false,
                     formError: false,
-                    // validaNum: '',
-                    // correctValNum: null,
-                    // validNumError: false,
-                    currentContest: null,
-                    pageBanner: null,
-                    // genderError : false,
+                    currentContest: null
                 }
             },
             created() {
@@ -117,11 +112,6 @@
                     this.dataLoaded = true;
                     this.currentContest = this.findContestBySlug('milton-kids-club');
                     console.log(this.currentContest)
-                    var temp_repo = this.findRepoByName('Pages Banner');
-                    if(temp_repo) {
-                        this.pageBanner = temp_repo.images[0];
-                    }
-                    this.pageBanner = this.pageBanner;
                 });
             },
             computed: {
@@ -175,7 +165,7 @@
                 loadData: async function() {
                     try {
                         // avoid making LOAD_META_DATA call for now as it will cause the entire Promise.all to fail since no meta data is set up.
-                        let results = await Promise.all([this.$store.dispatch("getData", "contests"),this.$store.dispatch("getData", "repos")]);
+                        let results = await Promise.all([this.$store.dispatch("getData", "contests")]);
                         return results;
                     } catch (e) {
                         console.log("Error loading data: " + e.message);
