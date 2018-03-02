@@ -54,7 +54,7 @@
     						    <div class="col-xs-12">
     						        <label class="checkbox">
                                         <input name="agree_terms" required type="checkbox" >
-                                        I understand by checking the box, I acknowledge that I have read, understood, and accept the <a href="/pages/pinecentre-pine-kid-s-club-disclaimer-and-the-code-of-conduct" target="_blank">Disclaimer and the Code of Conduct</a>
+                                        Yes, I would like to receive ongoing news related to events, promotions and special announcements from Milton Monkeys Kids' Club
                                     </label>
                                     <label class=""> <a href="https://www.morguard.com/privacy/"> Read our Privacy Policy here</a></label> 
     						    </div>
