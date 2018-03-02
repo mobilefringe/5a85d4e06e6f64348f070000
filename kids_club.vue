@@ -125,25 +125,8 @@
             },
             methods: {
                 validateBeforeSubmit() {
-                    // if(this.form_data.gender == null || this.form_data.gender == undefined || this.form_data.gender.length == 0){
-                    //     this.genderError = true;
-                    // }
                     this.$validator.validateAll().then((result) => {
                         let errors = this.errors;
-                        // if(this.form_data.agree_newsletter ) {
-                        //     $.getJSON("//mobilefringe.createsend.com/t/d/s/irudui/?callback=?",
-                        //     "cm-name=" + this.form_data.first_name + this.form_data.last_name +
-                        //     "&cm-irudui-irudui=" + this.form_data.email +
-                        //     "&cm-f-jtukjj=" + this.form_data.postal_code +
-                        //         function (data) {
-                        //         if (data.Status === 400) {
-                        //             e.preventDefault();
-                        //             console.error("Please try again later.");
-                        //         } else { // 200
-                        //             console.log("Newsletter submission successful.");
-                        //         }
-                        //     });  
-                        // }
                         //format contests data for MM
                         var contest_entry = {};
                         contest_entry.json = this.form_data;
