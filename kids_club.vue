@@ -25,6 +25,7 @@
             props:['locale'],
             data: function() {
                 return {
+                    dataLoaded: false,
                     form_data: {},
                     formSuccess: false,
                     formError: false,
@@ -38,6 +39,7 @@
             },
             created() {
                 this.loadData().then(response => {
+                    this.dataLoaded = true;
                     this.currentContest = this.findContestBySlug('pinecentre-kids-pine-club');
                     var temp_repo = this.findRepoByName('Pages Banner');
                     if(temp_repo) {
