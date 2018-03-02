@@ -55,8 +55,8 @@
     								<span v-show="errors.has('postal')" class="form-control-feedback">{{ errors.first('postal') }}</span>
     							</div>
     						</div>
-    						<div>
-    						    <div class="col-xs-12 margin_30">
+    						<div class="margin_40">
+    						    <div class="col-xs-12">
     						        <label class="checkbox">
                                         <input name="agree_terms" required type="checkbox" >
                                         Yes, I would like to receive ongoing news related to events, promotions and special announcements from Milton Monkeys Kids' Club
