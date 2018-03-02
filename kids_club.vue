@@ -9,7 +9,7 @@
                 <div class="row">
                     <div class="col-md-12">
                         <div v-if="currentContest">
-                            <img :src="currentContest.image_url" :alt="currentContest.name">
+                            <img class="img_width" :src="currentContest.image_url" :alt="currentContest.name">
                             <div v-html="currentContest.rich_description"></div>
                 		</div>
                 		
