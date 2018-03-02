@@ -111,6 +111,7 @@
                 this.loadData().then(response => {
                     this.dataLoaded = true;
                     this.currentContest = this.findContestBySlug('milton-kids-club');
+                    console.log(this.currentContest)
                     var temp_repo = this.findRepoByName('Pages Banner');
                     if(temp_repo) {
                         this.pageBanner = temp_repo.images[0];
