@@ -1390,7 +1390,7 @@ footer {
     }
     #primary_nav {
         width: 100vw;
-        height: calc(100vh - 136px);
+        height: calc(100vh - 54px);
         position: absolute;
         left: 0;
         right: 0;
@@ -1398,6 +1398,7 @@ footer {
         z-index: 999;
         overflow-x: scroll;
         background: #FFF;
+        font-size: 18px;
     }
     #primary_nav ul {
         color: $primary;
