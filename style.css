@@ -1429,12 +1429,14 @@ footer {
     	}
     }
     #primary_nav ul ul.show_submenu {
-        margin: 0 auto;
         padding: 0;
         padding-top: 20px;
-        min-width: 150px;
         display: block;
         font-size: 18px;
+    }
+    #primary_nav ul ul .submenu_item {
+    	margin: 0 auto;
+    	min-width: 150px;
     }
     .inside_header_background {
         margin-bottom: 20px;
