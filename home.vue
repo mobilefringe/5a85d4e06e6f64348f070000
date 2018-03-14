@@ -106,6 +106,11 @@
                         infinite: true,
                         slidesToShow: 1,
                         speed: 1000
+                    },
+                    meta: {
+                        meta_title: "",
+                        meta_description: "",
+                        meta_keywords: ""
                     }
                 }
             },
