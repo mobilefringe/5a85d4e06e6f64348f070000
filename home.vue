@@ -127,7 +127,8 @@
                     'property',
                     'timezone',
                     'getPropertyHours',
-                    'processedStores'
+                    'processedStores',
+                    'findMetaDataByPath'
                 ]),
                 weekdayHours() {
                     return _.filter(this.getPropertyHours, function(o) { return o.day_of_week == 1 });
