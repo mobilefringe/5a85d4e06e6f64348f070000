@@ -116,6 +116,7 @@ require(['Vue', 'vuex', 'vue2-filters', 'vue_router', 'routes', 'vuex-router-syn
                 try{
                     await this.$store.dispatch('initializeApi', { site: "milton", version: "v4" });
                     // avoid making LOAD_META_DATA call for now as it will cause the entire Promise.all to fail since no meta data is set up.
+                    //this.$store.dispatch("LOAD_META_DATA"), 
                     let results = await Promise.all([this.$store.dispatch("INITIALIZE_LOCALE"), this.$store.dispatch("getData", "property"), this.$store.dispatch("getData", "hours"), this.$store.dispatch("getData", "stores")]);
                 } catch (e) {
                     console.log("Error loading data: " + e.message);    
