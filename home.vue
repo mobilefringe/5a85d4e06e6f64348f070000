@@ -63,7 +63,7 @@
                     <div v-if="featureItems" class="feature_item_container">
                         <div v-for="item in featureItems" class="feature_item">
                             <!--<img :src="item.image_url" />-->
-                            <img src="//codecloud.cdn.speedyrails.net/sites/5a85d4e06e6f64348f070000/image/png/1518461604000/Stores Directory.png" />
+                            <a href="/events"><img src="//codecloud.cdn.speedyrails.net/sites/5a85d4e06e6f64348f070000/image/jpeg/1521823190000/feature-events.jpg//codecloud.cdn.speedyrails.net/sites/5a85d4e06e6f64348f070000/image/jpeg/1521823190000/feature-events.jpg" /></a>
                         </div>
                     </div>
                     <div class="row home_map_container hidden-lg hidden-md visible-sm-block visible-xs-block">
