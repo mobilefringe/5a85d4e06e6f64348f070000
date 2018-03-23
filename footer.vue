@@ -59,7 +59,7 @@
             data: function data() {
                 return {
                     suggestionAttribute: 'name',
-                    search: '',    
+                    search: '' 
                 }
             },
             props:['social_media'],
