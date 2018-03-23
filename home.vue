@@ -61,7 +61,7 @@
                 </div>
                 <div class="main_container">
                     <div v-if="featureItems" class="feature_item_container">
-                        <!-- DYNAMIC BANNERS -->
+                        <!-- DYNAMIC FEATURE ITEMS -->
                         <!--<div v-for="item in featureItems" class="feature_item">-->
                         <!--    <img :src="item.image_url" />-->
                         <!--</div>-->
