@@ -77,6 +77,7 @@
                                 <img src="//codecloud.cdn.speedyrails.net/sites/5a85d4e06e6f64348f070000/image/jpeg/1521823189000/feature-kids.jpg" />
                             </a>
                         </div>
+                        <!-- *** -->
                     </div>
                     <div class="row home_map_container hidden-lg hidden-md visible-sm-block visible-xs-block">
                         <div class="col-sm-8 col-sm-offset-2">
