@@ -797,6 +797,9 @@ footer {
         line-height: 1.4rem !important;
     }
 }
+.form-group {
+    margin-bottom: 0;
+}
 .checkbox {
     font-weight: 500;
 }
