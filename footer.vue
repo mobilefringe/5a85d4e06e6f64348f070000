@@ -23,27 +23,27 @@
                 </search-component>
             </div>
         </section>
-        <section class="footer_menu hidden_phone">
-            <div class="main_container ">
-                <ul class="footer_site_map hidden_phone">
-                    <router-link tag="li" to="/stores" exact>
-                        <a>Store Directory</a>
-                    </router-link>
-                    <router-link tag="li" to="/events" exact>
-                        <a>Events</a>
-                    </router-link>  
-                    <router-link tag="li" to="/promotions" exact>
-                        <a>Promotions</a>
-                    </router-link>
-                    <router-link tag="li" to="/pages/milton-leasing" exact>
-                        <a>Leasing</a>
-                    </router-link>
-                    <router-link tag="li" to="/contact-us" exact>
-                        <a>Contact Us</a>
-                    </router-link>
-                </ul>
-            </div>
-        </section>
+        <!--<section class="footer_menu hidden_phone">-->
+        <!--    <div class="main_container ">-->
+        <!--        <ul class="footer_site_map hidden_phone">-->
+        <!--            <router-link tag="li" to="/stores" exact>-->
+        <!--                <a>Store Directory</a>-->
+        <!--            </router-link>-->
+        <!--            <router-link tag="li" to="/events" exact>-->
+        <!--                <a>Events</a>-->
+        <!--            </router-link>  -->
+        <!--            <router-link tag="li" to="/promotions" exact>-->
+        <!--                <a>Promotions</a>-->
+        <!--            </router-link>-->
+        <!--            <router-link tag="li" to="/pages/milton-leasing" exact>-->
+        <!--                <a>Leasing</a>-->
+        <!--            </router-link>-->
+        <!--            <router-link tag="li" to="/contact-us" exact>-->
+        <!--                <a>Contact Us</a>-->
+        <!--            </router-link>-->
+        <!--        </ul>-->
+        <!--    </div>-->
+        <!--</section>-->
         <section class="footer_privacy">
             <div class="main_container">
                 <p class="footer_desc">&#169; {{copyright_year}} {{property.name}} | Powered By <a href="//mallmaverick.com" target="_blank">Mall Maverick</a> | <a href="/pages/milton-privacy-policy">Privacy Policy</a></p>
