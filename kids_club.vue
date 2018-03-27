@@ -14,41 +14,77 @@
                 		</div>
                 		
                         <form class="form-horizontal padding_top_20" action="form-submit" v-on:submit.prevent="validateBeforeSubmit">
+    						<!--<div class="form-group ">-->
+    						<!--	<div class="col-sm-4 col-xs-12" :class="{'has-error': errors.has('child_first_name')}">-->
+    						<!--		<label for="child_first_name">Child's First Name <span class="req_star"> *</span></label>-->
+    						<!--		<input v-model="form_data.child_first_name" v-validate="'required:true'" class="form-control" :class="{'input': true}" name="child_first_name" type="text" placeholder="First Name" data-vv-delay="500" data-vv-as="child's first name">-->
+    						<!--		<span v-show="errors.has('child_first_name')" class="form-control-feedback">{{ errors.first('child_first_name') }}</span>-->
+    						<!--	</div>-->
+    						<!--	<div class="col-sm-4 col-xs-12" :class="{'has-error': errors.has('child_last_name')}">-->
+    						<!--		<label for="child_last_name">Child's Last Name <span class="req_star"> *</span></label>-->
+    						<!--		<input v-model="form_data.child_last_name" v-validate="'required:true'" class="form-control" :class="{'input': true}" name="child_last_name" type="text" placeholder="Last Name" data-vv-delay="500" data-vv-as="child's last name">-->
+    						<!--		<span v-show="errors.has('child_last_name')" class="form-control-feedback">{{ errors.first('child_last_name') }}</span>-->
+    						<!--	</div>-->
+    						<!--	<div class="col-sm-4 col-xs-12" :class="{'has-error': errors.has('child_birthday')}">-->
+    						<!--		<label for="child_birthday">Child's Year of Birth <span class="req_star"> *</span></label>-->
+    						<!--		<input v-model="form_data.child_birthday" class="form-control" v-validate="'required|date_format:MM/DD/YYYY'" :class="{'input': true}" name="child_birthday" type="text" placeholder="mm/dd/yyyy" data-vv-delay="500" data-vv-as="birthday">-->
+    						<!--		<span v-show="errors.has('child_birthday')" class="form-control-feedback">{{ errors.first('child_birthday') }}</span>-->
+    						<!--	</div>-->
+    						<!--</div>-->
+    						<!--<div class="form-group ">-->
+    						<!--	<div class="col-sm-4 col-xs-12" :class="{'has-error': errors.has('parent_first_name')}">-->
+    						<!--		<label for="parent_first_name">Guardian's First Name <span class="req_star"> *</span></label>-->
+    						<!--		<input v-model="form_data.parent_first_name" v-validate="'required:true'" class="form-control" :class="{'input': true}" name="parent_first_name" type="text" placeholder="First Name" data-vv-delay="500" data-vv-as="guardian's first name">-->
+    						<!--		<span v-show="errors.has('parent_first_name')" class="form-control-feedback">{{ errors.first('parent_first_name') }}</span>-->
+    						<!--	</div>-->
+    						<!--	<div class="col-sm-4 col-xs-12" :class="{'has-error': errors.has('parent_last_name')}">-->
+    						<!--		<label for="parent_last_name">Guardian's Last Name <span class="req_star"> *</span></label>-->
+    						<!--		<input v-model="form_data.parent_last_name" v-validate="'required:true'" class="form-control" :class="{'input': true}" name="parent_last_name" type="text" placeholder="Last Name" data-vv-delay="500" data-vv-as="guardian's last name">-->
+    						<!--		<span v-show="errors.has('parent_last_name')" class="form-control-feedback">{{ errors.first('parent_last_name') }}</span>-->
+    						<!--	</div>-->
+    						<!--	<div class="col-sm-4 col-xs-12" :class="{'has-error': errors.has('parent_email')}">-->
+    						<!--		<label for="parent_email">Parent/Guardian's Email <span class="req_star"> *</span></label>-->
+    						<!--		<input v-model="form_data.parent_email" v-validate="'required|email'" class="form-control" :class="{'input': true}" name="parent_email" type="email" placeholder="Email" data-vv-delay="500" data-vv-as="email">-->
+    						<!--		<span v-show="errors.has('parent_email')" class="form-control-feedback">{{ errors.first('parent_email') }}</span>-->
+    						<!--	</div>-->
+    						<!--</div>-->
+    						<!--<div class="form-group">-->
+    						<!--	<div class="col-sm-4 col-xs-12 " :class="{'has-error': errors.has('postal_code')}">-->
+    						<!--		<label for="postal_code">Postal Code <span class="req_star"> *</span></label>-->
+    						<!--		<input v-model="form_data.postal_code" v-validate="'required:true'" class="form-control" :class="{'input': true}" name="postal_code" type="text" placeholder="Postal Code" data-vv-delay="500" data-vv-as="postal code">-->
+    						<!--		<span v-show="errors.has('postal_code')" class="form-control-feedback">{{ errors.first('postal_code') }}</span>-->
+    						<!--	</div>-->
+    						<!--</div>-->
+    						<!--<div>-->
+    						<!--    <div class="col-xs-12 margin_40">-->
+    						<!--        <label class="checkbox">-->
+          <!--                              <input v-model="form_data.newsletter" name="newsletter" required type="checkbox" >-->
+          <!--                              Yes, I would like to receive ongoing news related to events, promotions and special announcements from Milton Monkeys Kids' Club-->
+          <!--                          </label>-->
+          <!--                          <label class="checkbox">-->
+          <!--                              <input name="privacy_policy" required type="checkbox" >-->
+          <!--                              I agree to the <a href="/pages/milton-privacy-policy" target="_blank">Privacy Policy</a>.-->
+          <!--                          </label>-->
+    						<!--    </div>-->
+    						<!--</div>-->
+    						<!--<div class="form-group">-->
+    						<!--	<div class="col-xs-12">-->
+    						<!--		<button class="contest_btn animated_btn" type="submit" :disabled="formSuccess">Submit</button>-->
+    						<!--	</div>-->
+    						<!--</div>-->
+    						
+    						
     						<div class="form-group ">
     							<div class="col-sm-4 col-xs-12" :class="{'has-error': errors.has('child_first_name')}">
     								<label for="child_first_name">Child's First Name <span class="req_star"> *</span></label>
     								<input v-model="form_data.child_first_name" v-validate="'required:true'" class="form-control" :class="{'input': true}" name="child_first_name" type="text" placeholder="First Name" data-vv-delay="500" data-vv-as="child's first name">
     								<span v-show="errors.has('child_first_name')" class="form-control-feedback">{{ errors.first('child_first_name') }}</span>
     							</div>
-    							<div class="col-sm-4 col-xs-12" :class="{'has-error': errors.has('child_last_name')}">
-    								<label for="child_last_name">Child's Last Name <span class="req_star"> *</span></label>
-    								<input v-model="form_data.child_last_name" v-validate="'required:true'" class="form-control" :class="{'input': true}" name="child_last_name" type="text" placeholder="Last Name" data-vv-delay="500" data-vv-as="child's last name">
-    								<span v-show="errors.has('child_last_name')" class="form-control-feedback">{{ errors.first('child_last_name') }}</span>
-    							</div>
-    							<div class="col-sm-4 col-xs-12" :class="{'has-error': errors.has('child_birthday')}">
-    								<label for="child_birthday">Child's Year of Birth <span class="req_star"> *</span></label>
-    								<input v-model="form_data.child_birthday" class="form-control" v-validate="'required|date_format:MM/DD/YYYY'" :class="{'input': true}" name="child_birthday" type="text" placeholder="mm/dd/yyyy" data-vv-delay="500" data-vv-as="birthday">
-    								<span v-show="errors.has('child_birthday')" class="form-control-feedback">{{ errors.first('child_birthday') }}</span>
-    							</div>
-    						</div>
-    						<div class="form-group ">
-    							<div class="col-sm-4 col-xs-12" :class="{'has-error': errors.has('parent_first_name')}">
-    								<label for="parent_first_name">Guardian's First Name <span class="req_star"> *</span></label>
-    								<input v-model="form_data.parent_first_name" v-validate="'required:true'" class="form-control" :class="{'input': true}" name="parent_first_name" type="text" placeholder="First Name" data-vv-delay="500" data-vv-as="guardian's first name">
-    								<span v-show="errors.has('parent_first_name')" class="form-control-feedback">{{ errors.first('parent_first_name') }}</span>
-    							</div>
-    							<div class="col-sm-4 col-xs-12" :class="{'has-error': errors.has('parent_last_name')}">
-    								<label for="parent_last_name">Guardian's Last Name <span class="req_star"> *</span></label>
-    								<input v-model="form_data.parent_last_name" v-validate="'required:true'" class="form-control" :class="{'input': true}" name="parent_last_name" type="text" placeholder="Last Name" data-vv-delay="500" data-vv-as="guardian's last name">
-    								<span v-show="errors.has('parent_last_name')" class="form-control-feedback">{{ errors.first('parent_last_name') }}</span>
-    							</div>
-    							<div class="col-sm-4 col-xs-12" :class="{'has-error': errors.has('parent_email')}">
-    								<label for="parent_email">Guardian's Email <span class="req_star"> *</span></label>
+                                <div class="col-sm-4 col-xs-12" :class="{'has-error': errors.has('parent_email')}">
+    								<label for="parent_email">Parent/Guardian's Email <span class="req_star"> *</span></label>
     								<input v-model="form_data.parent_email" v-validate="'required|email'" class="form-control" :class="{'input': true}" name="parent_email" type="email" placeholder="Email" data-vv-delay="500" data-vv-as="email">
     								<span v-show="errors.has('parent_email')" class="form-control-feedback">{{ errors.first('parent_email') }}</span>
     							</div>
-    						</div>
-    						<div class="form-group">
     							<div class="col-sm-4 col-xs-12 " :class="{'has-error': errors.has('postal_code')}">
     								<label for="postal_code">Postal Code <span class="req_star"> *</span></label>
     								<input v-model="form_data.postal_code" v-validate="'required:true'" class="form-control" :class="{'input': true}" name="postal_code" type="text" placeholder="Postal Code" data-vv-delay="500" data-vv-as="postal code">
@@ -72,6 +108,10 @@
     								<button class="contest_btn animated_btn" type="submit" :disabled="formSuccess">Submit</button>
     							</div>
     						</div>
+    						
+    						
+    						
+    						
     					</form>
                         
                         <div id="send_contact_success" class="alert alert-success text-left" role="alert" v-show="formSuccess" style="margin-top: 20px;">
