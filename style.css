@@ -788,6 +788,15 @@ footer {
     font-size: 16px !important;
     line-height: normal !important;
 }
+
+/* *** CONTEST *** */
+.contest_body {
+    p, p span {
+        font-family: 'Open Sans', sans-serif !important;
+        font-size: 1rem !important;
+        line-height: 1.4rem !important;
+    }
+}
 /* *** EVENTS *** */
 .events_container {
     margin-bottom: 20px;
