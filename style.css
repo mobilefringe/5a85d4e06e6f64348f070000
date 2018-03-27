@@ -918,6 +918,11 @@ footer {
         font-size: 14px;
         color: #828282;
         text-transform: uppercase;
+        transition: all 0.3s ease;
+        &:hover {
+            color: $primary;
+            text-decoration: underline;
+        }
     }
 }
 .job_details_container {
