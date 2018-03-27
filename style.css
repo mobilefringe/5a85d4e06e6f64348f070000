@@ -772,6 +772,21 @@ footer {
 	border-radius: 3px;
 	@extend .animate;
 }
+@each $name,$hex in $btn-colors {
+		
+		&.btn-#{$name} {
+			
+			&:before,
+			&:after {
+				background-color: #{$hex};
+			}
+			
+			&:hover {
+				border-color: #{$hex};
+			}
+		}
+	}
+	
 .btn-fill-horz {
 	background-color: #e5e5e5;
 	border: 1px solid #e5e5e5;
@@ -785,6 +800,7 @@ footer {
 		position: absolute;
 		top: 0;
 		z-index: -1;
+		background-color: $primary;
 		@extend .animate;
 	}
 	&:before {
@@ -794,6 +810,7 @@ footer {
 		right: 50%;
 	}
 	&:hover {
+		border-color: $primary;
 		color: #fff;
 		&:before, &:after {
 			width: 50%;
