@@ -827,6 +827,11 @@ footer {
         font-size: 18px;
         color: #505050;
         text-transform: uppercase;
+        transition: all 0.3s ease;
+        &:hover {
+            color: $primary;
+            text-decoration: underline;
+        }
     }
 }
 .event_details_container {
