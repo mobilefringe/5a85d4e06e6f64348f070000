@@ -10,7 +10,7 @@
                     <div class="col-md-12">
                         <div v-if="currentContest" class="margin_60">
                             <img class="img_width margin_20" :src="currentContest.image_url" :alt="currentContest.name">
-                            <div v-html="currentContest.rich_description"></div>
+                            <div class="contest_body" v-html="currentContest.rich_description"></div>
                 		</div>
                 		
                         <form class="form-horizontal padding_top_20" action="form-submit" v-on:submit.prevent="validateBeforeSubmit">
