@@ -105,7 +105,7 @@
     						</div>
     						<div class="form-group">
     							<div class="col-xs-12">
-    								<button class="contest_btn animated_btn" type="submit" :disabled="formSuccess">Submit</button>
+    								<button class="contest_btn btn btn-fill-horz" type="submit" :disabled="formSuccess">Submit</button> <!-- animated_btn -->
     							</div>
     						</div>
     					</form>
