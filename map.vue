@@ -11,9 +11,9 @@
                         <v-select :options="allStores" :placeholder="'Select A Store'" :searchable="false" :label="'name'" :on-change="dropPin"></v-select>
                     </div>
                 </div>
-                <div class="row">
+                <div v-if="downloadLink" class="row">
                     <div class="col-md-12">
-                        <a href=""><p class="download_map">Download Centre Map</p></a>
+                        <a href="downloadLink.image_url"><p class="download_map">Download Centre Map</p></a>
                     </div>
                 </div>
                 <div class="row">
