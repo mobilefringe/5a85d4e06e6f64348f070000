@@ -35,6 +35,7 @@
             data: function() {
                 return {
                     dataLoaded: false,
+                    downloadLink: null
                 }
             },
             created (){
