@@ -42,6 +42,8 @@
                                         <input name="newsletter" required type="checkbox" >
                                         I agree to receive emails from Milton Mall.
                                     </label>
+                                </div>
+                            </div>
                             <div class="form-group ">
     							<div class="col-xs-12">
                                     <label class="checkbox">
