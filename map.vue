@@ -13,7 +13,7 @@
                 </div>
                 <div v-if="downloadLink" class="row">
                     <div class="col-md-12">
-                        <a :href="downloadLink.image_url"><p class="download_map">Download Centre Map</p></a>
+                        <a :href="downloadLink.image_url" target="_blank"><p class="download_map">Download Centre Map</p></a>
                     </div>
                 </div>
                 <div class="row">
