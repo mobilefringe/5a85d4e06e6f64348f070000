@@ -27,40 +27,18 @@
                                     <input id="fielddhkjkt" class="form-control" name="cm-f-dhkjkt" type="text" />
                                 </div>
                             </div>
-                            <!--<div class="form-inline">-->
-                            <!--    <label class="checkbox">-->
-                            <!--        <input name="newsletter" required type="checkbox" >-->
-                            <!--        I agree to receive emails from Milton Mall regarding Kids Club.-->
-                            <!--    </label>-->
-                            <!--</div>-->
                             <div class="margin_30 form-inline">
                                 <label class="checkbox" for="listiljuii">
                                     <input id="listiljuii" name="cm-ol-iljuii" type="checkbox" required />
                                     I agree to receive emails form Milton Mall and Milton Monkeys’ Kids’ Club
                                 </label>
                             </div>
-                            <!--<div class="form-inline">-->
-                            <!--    <label class="checkbox">-->
-                            <!--        <input name="privacy_policy" required type="checkbox">-->
-                            <!--        I agree to the <a href="/pages/milton-privacy-policy" target="_blank">Privacy Policy</a>.-->
-                            <!--    </label>-->
-                            <!--</div>-->
                             <div class="form-group ">
     							<div class="col-xs-12">
                                     <button class="fill_btn js-cm-submit-button" type="submit">Submit</button> 
                                 </div>
                             </div>
                         </form>
-                        <div id="send_contact_success" class="alert alert-success text-left" role="alert" v-show="formSuccess" style="margin-top: 20px;">
-                            <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
-                            <span class="sr-only">Success</span>
-                            Your subscription has been confirmed. You've been added to our list and will hear from us soon.
-                        </div>
-                        <div id="send_contact_error" class="alert alert-danger text-left" role="alert" v-show="formError" style="margin-top: 20px;">
-                            <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
-                            <span class="sr-only">Error:</span>
-                            There was an error when trying to submit your request. Please try again later.
-                        </div>
                     </div>
                 </div>
             </div>
@@ -69,11 +47,8 @@
 </template>
 
 <script>
-    define(["Vue", "vuex", "jquery", "axios", "moment", "moment-timezone", "vue-moment", "vue-meta", 'vee-validate', "v-calendar", 'utility', 'vue-checkbox-radio', 'campaign-monitor'], function(Vue, Vuex, $, axios, moment, tz, VueMoment, Meta, VeeValidate, VCalendar, Utility, CheckboxRadio, CampaignMonitor) {
+    define(["Vue", "vuex", "jquery", "axios", "vue-meta"], function(Vue, Vuex, $, axios, Meta) {
         Vue.use(Meta);
-        Vue.use(VeeValidate);
-        Vue.use(VCalendar.default);
-        Vue.use(CheckboxRadio.default);
         return Vue.component("kids-club-component", {
             template: template, // the variable template will be injected
             props:['locale'],
@@ -135,14 +110,10 @@
                     this.$validator.validateAll().then((result) => {
                         if (result) {
                             let errors = this.errors;
-                            
                             if(errors.length > 0) {
                                 console.log("Error");
-                                this.formError = true;
                             } else {
                                 console.log("No Error");
-                                // return true;
-                                this.formSuccess = true;
                                 form.target.submit();
                             }
                         }
