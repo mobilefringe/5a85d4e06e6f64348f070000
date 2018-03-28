@@ -28,15 +28,15 @@
                                     <input id="fielddhkjkt" class="form-control" name="cm-f-dhkjkt" type="text" />
                                 </div>
                             </div>
-                            <div>
-    							<div class="col-xs-12">
+                            <div class="form-inline">
+    							<div>
                                     <label class="checkbox" for="listiljuii">
                                         <input id="listiljuii" name="cm-ol-iljuii" type="checkbox" />
                                         Yes! Sign me up for Milton Mall's Newsletter
                                     </label>
                                 </div>
                             </div>
-                            <div>
+                            <div class="form-inline">
     							<div class="col-xs-12">
                                     <label class="checkbox">
                                         <input name="newsletter" required type="checkbox" >
@@ -44,7 +44,7 @@
                                     </label>
                                 </div>
                             </div>
-                            <div>
+                            <div class="form-inline">
     							<div class="col-xs-12">
                                     <label class="checkbox">
                                         <input name="privacy_policy" required type="checkbox">
