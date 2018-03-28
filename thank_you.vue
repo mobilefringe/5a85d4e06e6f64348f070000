@@ -24,7 +24,7 @@
 <script>
     define(["Vue", "vuex", "jquery", "axios", "vue-meta"], function(Vue, Vuex, $, axios, Meta) {
         Vue.use(Meta);
-        return Vue.component("kids-club-component", {
+        return Vue.component("thank-you-component", {
             template: template, // the variable template will be injected
             props:['locale'],
             data: function() {
