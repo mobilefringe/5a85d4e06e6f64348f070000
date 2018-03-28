@@ -140,9 +140,11 @@
                             
                             if(errors.length > 0) {
                                 console.log("Error");
+                                this.formError = true;
                             } else {
                                 console.log("No Error");
                                 // return true;
+                                this.formSuccess = true;
                                 form.target.submit();
                             }
                         }
