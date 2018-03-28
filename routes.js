@@ -122,7 +122,7 @@ define([], function () {
                     path: '/kids_club_thank_you',
                     component: view('kids_club_thanks'),
                     meta: {
-                        pageName: 'Kids Club Thank You',
+                        pageName: 'Thank You',
                     },
                     name: ''
                 }
