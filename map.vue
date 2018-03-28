@@ -40,9 +40,10 @@
             },
             created (){
                 this.loadData().then(response => {
-                    this.dataLoaded = true;
+                    this.downloadMap;
                     // our mapSvg plugin is stupid and outdated. need this hack to tie Raphael to window object (global variable)
                     window.Raphael = Raphael; 
+                    this.dataLoaded = true;
                 });
             },
             computed: {
