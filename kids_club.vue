@@ -47,7 +47,7 @@
 </template>
 
 <script>
-    define(["Vue", "vuex", "jquery", "axios", "vue-meta"], function(Vue, Vuex, $, axios, Meta) {
+    define(["Vue", "vuex", "jquery", "axios", "vue-meta", "campaign-monitor"], function(Vue, Vuex, $, axios, Meta, CampaignMonitor) {
         Vue.use(Meta);
         return Vue.component("kids-club-component", {
             template: template, // the variable template will be injected
