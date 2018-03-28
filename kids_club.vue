@@ -17,15 +17,15 @@
                             <div class="form-group ">
     							<div class="col-sm-4 col-xs-12">
                                     <label for="fielddhkjhh">Child&#x27;s Name</label><br />
-                                    <input class="form-control" id="fielddhkjhh" name="cm-f-dhkjhh" type="text" />
+                                    <input id="fielddhkjhh" class="form-control" name="cm-f-dhkjhh" type="text" />
                                 </div>
                                 <div class="col-sm-4 col-xs-12">
                                     <label for="fieldEmail">Parent/Guardian's Email</label><br />
-                                    <input class="form-control" id="fieldEmail" class="js-cm-email-input" name="cm-ukihdd-ukihdd" type="email" required />
+                                    <input id="fieldEmail" class="form-control js-cm-email-input" name="cm-ukihdd-ukihdd" type="email" required />
                                 </div>
                                 <div class="col-sm-4 col-xs-12">
                                     <label for="fielddhkjkt">Postal Code</label><br />
-                                    <input class="form-control" id="fielddhkjkt" name="cm-f-dhkjkt" type="text" />
+                                    <input id="fielddhkjkt" class="form-control" name="cm-f-dhkjkt" type="text" />
                                 </div>
                             </div>
                             <div>
