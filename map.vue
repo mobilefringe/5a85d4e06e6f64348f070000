@@ -6,14 +6,14 @@
         </transition>
         <transition name="fade">
             <div v-if="dataLoaded" v-cloak class="main_container margin_30">
-                <div class="row hidden-lg hidden-md visible-sm-block visible-xs-block">
-                    <div class="col-md-12 mobile_store_select">
-                        <v-select :options="allStores" :placeholder="'Select A Store'" :searchable="false" :label="'name'" :on-change="dropPin"></v-select>
-                    </div>
-                </div>
                 <div v-if="downloadLink" class="row">
                     <div class="col-md-12">
                         <a :href="downloadLink.image_url" target="_blank"><p class="download_map">Download Centre Map</p></a>
+                    </div>
+                </div>
+                <div class="row hidden-lg hidden-md visible-sm-block visible-xs-block">
+                    <div class="col-md-12 mobile_store_select">
+                        <v-select :options="allStores" :placeholder="'Select A Store'" :searchable="false" :label="'name'" :on-change="dropPin"></v-select>
                     </div>
                 </div>
                 <div class="row">
