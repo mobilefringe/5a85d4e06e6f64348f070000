@@ -41,7 +41,8 @@
             created (){
                 this.loadData().then(response => {
                     this.dataLoaded = true;
-                    window.Raphael = Raphael; // our mapSvg plugin is stupid and outdated. need this hack to tie Raphael to window object (global variable)
+                    // our mapSvg plugin is stupid and outdated. need this hack to tie Raphael to window object (global variable)
+                    window.Raphael = Raphael; 
                 });
             },
             computed: {
