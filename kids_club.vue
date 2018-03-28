@@ -39,7 +39,13 @@
                             <div class="form-group ">
     							<div class="col-xs-12">
                                     <label class="checkbox">
-                                        <input name="privacy_policy" required type="checkbox" >
+                                        <input name="newsletter" required type="checkbox" >
+                                        I agree to receive emails from Milton Mall.
+                                    </label>
+                            <div class="form-group ">
+    							<div class="col-xs-12">
+                                    <label class="checkbox">
+                                        <input name="privacy_policy" required type="checkbox">
                                         I agree to the <a href="/pages/milton-privacy-policy" target="_blank">Privacy Policy</a>.
                                     </label>
                                 </div>
