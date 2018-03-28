@@ -36,6 +36,7 @@ require.config({
         'vue-select': 'https://cdn.jsdelivr.net/npm/vue-select@2.3.0/dist/vue-select.min',
         'v-calendar': 'https://unpkg.com/v-calendar@0.5.1/lib/v-calendar.min',
         'vue-checkbox-radio' : 'https://cdn.jsdelivr.net/npm/vue-checkbox-radio@0.6.0/dist/index.min',
+        'campaign-monitor' : 'https://js.createsend1.com/javascript/copypastesubscribeformlogic',
         // Dependencies for Map //
         'Raphael': 'https://cdnjs.cloudflare.com/ajax/libs/raphael/2.2.7/raphael.min', //'http://mallmaverick.com/javascripts/mapsvg/raphael',
         'mousewheel': 'https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min',
