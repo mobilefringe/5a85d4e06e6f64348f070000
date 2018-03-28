@@ -1,0 +1,92 @@
+<template>
+    <div> <!-- without an outer container div this component template will not render -->
+        <loading-spinner v-if="!dataLoaded"></loading-spinner>
+        <transition name="fade">
+            <inside-header-component></inside-header-component>
+        </transition>
+        <transition name="fade">
+            <div v-if="dataLoaded" v-cloak class="main_container margin_30">
+                <div class="row hidden-lg hidden-md visible-sm-block visible-xs-block">
+                    <div class="col-md-12 mobile_store_select">
+                        <v-select :options="allStores" :placeholder="'Select A Store'" :searchable="false" :label="'name'" :on-change="dropPin"></v-select>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                    <a href=""><p class="read_more">Download Centre Map</p></a>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <svg-map ref="svgRef" v-bind:svgMapUrl="getSVGurl" :regions="regions"></svg-map>
+                    </div>
+                </div>
+            </div>
+        </transition>
+    </div>
+</template>
+
+<script>
+    define(["Vue", "vuex", "vue-meta", "vue-select", "jquery", "Raphael", "mm_mapsvg", "mousewheel", "vue!svg-map"], function(Vue, Vuex, Meta, VueSelect, $, Raphael, mapSvg, mousewheel, SVGMapComponent) {
+        Vue.use(Meta);
+        Vue.component('v-select', VueSelect.VueSelect);
+        return Vue.component("stores-component", {
+            template: template, // the variable template will be injected
+            data: function() {
+                return {
+                    dataLoaded: false,
+                }
+            },
+            created (){
+                this.loadData().then(response => {
+                    this.dataLoaded = true;
+                    window.Raphael = Raphael; // our mapSvg plugin is stupid and outdated. need this hack to tie Raphael to window object (global variable)
+                });
+            },
+            computed: {
+                ...Vuex.mapGetters([
+                    'property',
+                    'processedStores'
+                ]),
+                allStores() {
+                    return this.processedStores;
+                },
+                getSVGurl () {
+                    return "https://www.mallmaverick.com" + this.property.svgmap_url;
+                },
+                svgMapRef() {
+                    return this.$refs.svgRef;
+                },
+                regions () {
+                    var regions = {}
+                    _.forEach( this.processedStores , function( val, key ) {
+                        if(val.svgmap_region != null && typeof(val.svgmap_region)  != 'undefined'){
+                            obj = {};
+                            obj["tooltip"] = "<p class='tooltip_name'>" + val.name + "</p>";
+                            obj["attr"] = {};
+                            obj["attr"]["href"] = "/stores/" + val.slug;
+                            regions[val.svgmap_region] = obj;
+                        }
+                        
+                    });
+                    return regions;
+                }
+            },
+            methods: {
+                loadData: async function () {
+                    try {
+                        let results = await Promise.all([this.$store.dispatch("getData", "repos")]);
+                        return results;
+                    } catch (e) {
+                        console.log("Error loading data: " + e.message);
+                    }
+                },
+                dropPin(store) {
+                    this.svgMapRef.hideMarkers();
+                    this.svgMapRef.addMarker(store, '//codecloud.cdn.speedyrails.net/sites/589e308f6e6f641b9f010000/image/png/1484850466000/show_pin.png');
+                    this.svgMapRef.setViewBox(store)
+                }
+            }
+        });
+    });
+</script>
