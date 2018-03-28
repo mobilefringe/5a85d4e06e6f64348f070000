@@ -8,7 +8,13 @@
             <div v-if="dataLoaded" v-cloak class="main_container margin_30">
                 <div class="row">
                     <div class="col-md-12">
+                        <div class="margin_30">
+                            <p>Your subscription has been confirmed. You've been added to our list and will hear from us soon.</p>    
+                        </div>
                         
+                        <router-link to="">
+                            <div class="fill_btn">Back to Kids' Club Form</div>
+                        </router-link>
                     </div>
                 </div>
             </div>
