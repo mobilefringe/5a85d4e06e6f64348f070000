@@ -167,6 +167,14 @@ define([], function () {
                         pageName: 'Newsletter',
                     },
                     name: 'newsletter'
+                },
+                {
+                    path: '',
+                    component: view('thank_you'),
+                    meta: {
+                        pageName: 'Thank You',
+                    },
+                    name: ''
                 }
             ]
         },
