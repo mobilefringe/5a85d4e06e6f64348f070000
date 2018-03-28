@@ -29,28 +29,22 @@
                                 </div>
                             </div>
                             <div class="form-inline">
-    							<div>
-                                    <label class="checkbox" for="listiljuii">
-                                        <input id="listiljuii" name="cm-ol-iljuii" type="checkbox" />
-                                        Yes! Sign me up for Milton Mall's Newsletter
-                                    </label>
-                                </div>
+                                <label class="checkbox" for="listiljuii">
+                                    <input id="listiljuii" name="cm-ol-iljuii" type="checkbox" />
+                                    Yes! Sign me up for Milton Mall's Newsletter
+                                </label>
                             </div>
                             <div class="form-inline">
-    							<div class="col-xs-12">
-                                    <label class="checkbox">
-                                        <input name="newsletter" required type="checkbox" >
-                                        I agree to receive emails from Milton Mall.
-                                    </label>
-                                </div>
+                                <label class="checkbox">
+                                    <input name="newsletter" required type="checkbox" >
+                                    I agree to receive emails from Milton Mall.
+                                </label>
                             </div>
                             <div class="form-inline">
-    							<div class="col-xs-12">
-                                    <label class="checkbox">
-                                        <input name="privacy_policy" required type="checkbox">
-                                        I agree to the <a href="/pages/milton-privacy-policy" target="_blank">Privacy Policy</a>.
-                                    </label>
-                                </div>
+                                <label class="checkbox">
+                                    <input name="privacy_policy" required type="checkbox">
+                                    I agree to the <a href="/pages/milton-privacy-policy" target="_blank">Privacy Policy</a>.
+                                </label>
                             </div>
                             <div class="form-group ">
     							<div class="col-xs-12">
