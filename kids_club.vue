@@ -34,7 +34,7 @@
                             <!--        I agree to receive emails from Milton Mall regarding Kids Club.-->
                             <!--    </label>-->
                             <!--</div>-->
-                            <div class="form-inline">
+                            <div class="margin_30 form-inline">
                                 <label class="checkbox" for="listiljuii">
                                     <input id="listiljuii" name="cm-ol-iljuii" type="checkbox" required />
                                     I agree to receive emails form Milton Mall and Milton Monkeys’ Kids’ Club
