@@ -75,28 +75,6 @@
                 ]),
             },
             methods: {
-                // validateBeforeSubmit() {
-                //     this.$validator.validateAll().then((result) => {
-                //         let errors = this.errors;
-                //         //format contests data for MM
-                //         var contest_entry = {};
-                //         contest_entry.json = this.form_data;
-                //         var vm = this;
-                //         host_name = this.property.mm_host.replace("http:", "");
-                //         var url = host_name + "/contests/" + this.currentContest.slug + "/json_entry";
-                //         $.ajax({
-                //             url: url,
-                //             type: "POST",
-                //             data: contest_entry,
-                //             success: function(data) {
-                //                 vm.formSuccess = true;
-                //             },
-                //             error: function(data){
-                //                 vm.formError = true;
-                //             }
-                //         });
-                //     })
-                // },
                 loadData: async function() {
                     try {
                         // avoid making LOAD_META_DATA call for now as it will cause the entire Promise.all to fail since no meta data is set up.
