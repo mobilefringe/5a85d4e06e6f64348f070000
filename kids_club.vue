@@ -29,13 +29,13 @@
                                 </div>
                             </div>
                             <div class="form-group ">
-    							<div class="col-sm-4 col-xs-12">
+    							<div class="col-xs-12">
                                     <label>Opt into another list</label><br />
                                     <input id="listiljuii" name="cm-ol-iljuii" type="checkbox" /> <label for="listiljuii">Newsletter</label>
                                 </div>
                             </div>
                             <div class="form-group ">
-    							<div class="col-sm-4 col-xs-12">
+    							<div class="col-xs-12">
                                     <button class="fill_btn js-cm-submit-button" type="submit">Submit</button> 
                                 </div>
                             </div>
