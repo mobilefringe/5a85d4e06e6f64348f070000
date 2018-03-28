@@ -169,7 +169,7 @@ define([], function () {
                     name: 'newsletter'
                 },
                 {
-                    path: '',
+                    path: '/thank_you',
                     component: view('thank_you'),
                     meta: {
                         pageName: 'Thank You',
