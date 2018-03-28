@@ -13,7 +13,7 @@
                 </div>
                 <div class="row">
                     <div class="col-md-12">
-                    <a href=""><p class="download_map">Download Centre Map</p></a>
+                        <a href=""><p class="download_map">Download Centre Map</p></a>
                     </div>
                 </div>
                 <div class="row">
@@ -46,6 +46,7 @@
             computed: {
                 ...Vuex.mapGetters([
                     'property',
+                    'findRepoByName',
                     'processedStores'
                 ]),
                 allStores() {
