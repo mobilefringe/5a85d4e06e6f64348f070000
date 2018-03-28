@@ -13,19 +13,19 @@
                             <div class="contest_body" v-html="currentContest.rich_description"></div>
                 		</div>
                 		
-                		<form id="subForm" class="js-cm-form" action="https://www.createsend.com/t/subscribeerror?description=" method="post" data-id="92D4C54F0FEC16E5ADC2B1904DE9ED1AB518424692B1918726CC1BDEC952DE8B96532C4DD58B1C389252E53F3C68E748D5F4932FCBD3A00FA5F4EE555698A95C">
+                		<form id="subForm" class="form-horizontal js-cm-form" action="https://www.createsend.com/t/subscribeerror?description=" method="post" data-id="92D4C54F0FEC16E5ADC2B1904DE9ED1AB518424692B1918726CC1BDEC952DE8B96532C4DD58B1C389252E53F3C68E748D5F4932FCBD3A00FA5F4EE555698A95C">
                             <div class="form-group ">
     							<div class="col-sm-4 col-xs-12">
                                     <label for="fielddhkjhh">Child&#x27;s Name</label><br />
-                                    <input id="fielddhkjhh" name="cm-f-dhkjhh" type="text" />
+                                    <input class="form-control" id="fielddhkjhh" name="cm-f-dhkjhh" type="text" />
                                 </div>
                                 <div class="col-sm-4 col-xs-12">
                                     <label for="fieldEmail">Parent/Guardian's Email</label><br />
-                                    <input id="fieldEmail" class="js-cm-email-input" name="cm-ukihdd-ukihdd" type="email" required /> 
+                                    <input class="form-control" id="fieldEmail" class="js-cm-email-input" name="cm-ukihdd-ukihdd" type="email" required />
                                 </div>
                                 <div class="col-sm-4 col-xs-12">
                                     <label for="fielddhkjkt">Postal Code</label><br />
-                                    <input id="fielddhkjkt" name="cm-f-dhkjkt" type="text" />
+                                    <input class="form-control" id="fielddhkjkt" name="cm-f-dhkjkt" type="text" />
                                 </div>
                             </div>
                             <div>
