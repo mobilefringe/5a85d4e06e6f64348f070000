@@ -117,6 +117,14 @@ define([], function () {
                         pageName: 'Kids Club',
                     },
                     name: 'kidsClub'
+                },
+                {   
+                    path: '',
+                    component: view('kids_club_thanks'),
+                    meta: {
+                        pageName: 'Kids Club Thank You',
+                    },
+                    name: ''
                 }
             ]
         },
