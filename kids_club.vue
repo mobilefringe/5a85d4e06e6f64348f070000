@@ -10,7 +10,7 @@
                     <div class="col-md-12">
                         <div v-if="currentContest" class="margin_60">
                             <img class="img_width margin_20" :src="currentContest.image_url" :alt="currentContest.name">
-                            <div class="contest_body" v-html="currentContest.rich_description"></div>
+                            <div class="kidsclub_body" v-html="currentContest.rich_description"></div>
                 		</div>
                 		
                 		<form id="subForm" class="form-horizontal js-cm-form" action="https://www.createsend.com/t/subscribeerror?description=" method="post" data-id="92D4C54F0FEC16E5ADC2B1904DE9ED1AB518424692B1918726CC1BDEC952DE8B96532C4DD58B1C389252E53F3C68E748D5F4932FCBD3A00FA5F4EE555698A95C">
