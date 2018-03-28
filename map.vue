@@ -49,6 +49,12 @@
                     'findRepoByName',
                     'processedStores'
                 ]),
+                downloadMap() {
+                    var temp_repo = this.findRepoByName('Floor Plan');
+                    if(temp_repo) {
+                        this.downloadLink = temp_repo.images[0];
+                    }    
+                },
                 allStores() {
                     return this.processedStores;
                 },
