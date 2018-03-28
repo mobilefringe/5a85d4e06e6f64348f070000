@@ -12,7 +12,7 @@
                             <p>Your subscription has been confirmed. You've been added to our list and will hear from us soon.</p>    
                         </div>
                         
-                        <router-link to="">
+                        <router-link to="/kids_club">
                             <div class="fill_btn">Back to Kids' Club Form</div>
                         </router-link>
                     </div>
