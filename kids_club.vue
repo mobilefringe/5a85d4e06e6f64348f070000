@@ -35,7 +35,9 @@
                             </div>
                             <div class="form-group ">
     							<div class="col-xs-12">
-                                    <button class="fill_btn js-cm-submit-button" type="submit">Submit</button> 
+                                    <button class="fill_btn js-cm-submit-button" type="submit">
+                                        Submit <i class="fa fa-angle-right" aria-hidden="true"></i>
+                                    </button> 
                                 </div>
                             </div>
                         </form>
