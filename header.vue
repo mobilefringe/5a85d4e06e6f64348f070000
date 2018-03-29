@@ -114,5 +114,96 @@
 </template>
 
 <script>
-var _extends=Object.assign||function(t){for(var e=1;e<arguments.length;e++){var o=arguments[e];for(var n in o)Object.prototype.hasOwnProperty.call(o,n)&&(t[n]=o[n])}return t};define(["Vue","vuex","vue_router","routes","vue!today_hours.vue"],function(t,e){return t.component("header-component",{template:template,data:function(){return{active:!1,newsletter_email:"",isOpen:!1,windowWidth:0,show_menu:!0,showSubMenu1:!1,showSubMenu2:!1,showSubMenu3:!1}},props:["social_media"],watch:{$route:function(){this.windowWidth<=768&&(this.show_menu=!1)},windowWidth:function(){this.windowWidth<=768?this.show_menu=!1:(this.show_menu=!0,document.body.classList.remove("no-scroll"))},show_menu:function(){1==this.show_menu?document.body.classList.add("no-scroll"):0==this.show_menu&&document.body.classList.remove("no-scroll")}},mounted:function(){this.$nextTick(function(){window.addEventListener("resize",this.getWindowWidth),this.getWindowWidth()})},computed:_extends({},e.mapGetters(["property","timezone","hours","getTodayHours"]),{locale:{get:function(){return this.$store.state.locale},set:function(t){this.$store.commit("SET_LOCALE",{lang:t})}},todays_hours:function(){return this.getTodayHours}}),methods:{changeLocale:function(t){this.locale=t},getWindowWidth:function(){this.windowWidth=window.innerWidth},toggleSubMenu:function(t){this.showSubMenu1=!1,this.showSubMenu2=!1,this.showSubMenu3=!1,"dropDown1"==t?this.showSubMenu1=!0:"dropDown2"==t?this.showSubMenu2=!0:"dropDown3"==t&&(this.showSubMenu3=!0)}},beforeDestroy:function(){window.removeEventListener("resize",this.getWindowWidth)}})});
+    define(["Vue", "vuex", "vue_router", "routes", "vue!today_hours.vue"], function (Vue, Vuex, VueRouter, appRoutes, TodayHoursComponent) {
+        return Vue.component("header-component", {
+            template: template, // the variable template will be injected,
+            data: function () {
+                return {
+                    active: false, 
+                    newsletter_email: "",
+                    isOpen: false,
+                    windowWidth: 0,
+                    show_menu: true,
+                    showSubMenu1: false,
+                    showSubMenu2: false,
+                    showSubMenu3: false
+                }
+            },
+            props:['social_media'],
+            watch: {
+                $route: function() {
+                    if (this.windowWidth <= 768) {
+                        this.show_menu = false;
+                    }  
+                },
+                windowWidth: function() {
+                    if (this.windowWidth <= 768) {
+                        this.show_menu = false;
+                    } else {
+                        this.show_menu = true;
+                        document.body.classList.remove("no-scroll");
+                    }
+                },
+                show_menu: function() {
+                    if(this.show_menu == true){
+                        document.body.classList.add("no-scroll");
+                    } else if (this.show_menu == false) {
+                        document.body.classList.remove("no-scroll");
+                    }
+                }
+            },
+            mounted() {
+                this.$nextTick(function() {
+                    window.addEventListener('resize', this.getWindowWidth);
+                    //Init
+                    this.getWindowWidth();
+                });
+            },
+            computed: {
+                ...Vuex.mapGetters([
+                    'property',
+                    'timezone',
+                    'hours',
+                    'getTodayHours',
+                ]),
+                locale: {
+                    get () {
+                        return this.$store.state.locale
+                    },
+                    set (value) {
+                        this.$store.commit('SET_LOCALE', { lang: value })
+                    }
+                },
+                todays_hours() {
+                    return this.getTodayHours;
+                }
+            },
+            methods: {
+                changeLocale: function(val) {
+                    // this will update the data store, which in turn will trigger the watcher to update the locale in the system
+                    this.locale = val; 
+                },
+                getWindowWidth(event) {
+                    this.windowWidth = window.innerWidth;
+                },
+                toggleSubMenu(id) {
+                    this.showSubMenu1 = false;
+                    this.showSubMenu2 = false;
+                    this.showSubMenu3 = false;
+                    
+                    if(id == "dropDown1"){
+                        this.showSubMenu1 = true   
+                    } else if (id == "dropDown2"){
+                        this.showSubMenu2 = true 
+                    } else if (id == "dropDown3"){
+                        this.showSubMenu3 = true 
+                    }
+                    
+                }
+            },
+            beforeDestroy: function() {
+                window.removeEventListener('resize', this.getWindowWidth);
+            }
+        });
+    });
 </script>
