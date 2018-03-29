@@ -30,7 +30,7 @@
                             <div class="margin_30 form-inline">
                                 <label class="checkbox" for="listiljuii">
                                     <input id="listiljuii" name="cm-ol-iljuii" type="checkbox" required />
-                                    I agree to receive emails form Milton Mall and Milton Monkeys’ Kids’ Club
+                                    I agree to receive emails form Milton Mall and Milton Monkeys Kids’ Club
                                 </label>
                             </div>
                             <div class="form-group ">
