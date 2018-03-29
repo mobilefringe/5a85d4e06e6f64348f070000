@@ -140,7 +140,6 @@
                     this.dropPin();
                 },
                 dropPin () {
-                    // console.log("this.currentStore.svgmap_region", this.currentStore.svgmap_region);
                     this.svgMapRef.addMarker(this.currentStore,'//codecloud.cdn.speedyrails.net/sites/589e308f6e6f641b9f010000/image/png/1484850466000/show_pin.png');
                     this.svgMapRef.setViewBox(this.currentStore)
                 } 
