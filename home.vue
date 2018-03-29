@@ -192,7 +192,6 @@
                             obj["attr"]["href"] = "/stores/" + val.slug;
                             regions[val.svgmap_region] = obj;
                         }
-                        
                     });
                     return regions;
                 }
