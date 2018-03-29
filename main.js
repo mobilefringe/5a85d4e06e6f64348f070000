@@ -121,8 +121,6 @@ require(['Vue', 'vuex', 'vue2-filters', 'vue_router', 'routes', 'vuex-router-syn
                     });
                     await Promise.all([this.$store.dispatch("getData", "property")]);
                     let results = await Promise.all([this.$store.dispatch("LOAD_META_DATA"), this.$store.dispatch("INITIALIZE_LOCALE"), this.$store.dispatch("getData", "hours"), this.$store.dispatch("getData", "stores")]);
-                    
-                    // let results = await Promise.all([this.$store.dispatch("INITIALIZE_LOCALE"), this.$store.dispatch("getData", "property"), this.$store.dispatch("getData", "hours"), this.$store.dispatch("getData", "stores")]);
                 } catch (e) {
                     console.log("Error loading data: " + e.message);    
                 }
