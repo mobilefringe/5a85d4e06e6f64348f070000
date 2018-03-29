@@ -5,20 +5,19 @@
             <div v-if="dataLoaded" v-cloak>
                 <div class="home_banner_container" >
                     <slick ref="slick" :options="slickOptions">
-                        <!-- DYNAMIC BANNERS -->
-                        <!--<div v-if="homeBanners" v-for="banner in homeBanners">-->
-                        <!--    <router-link v-if="banner.url" :to="banner.url" class="">-->
-                        <!--        <div class="banner_image" v-bind:style="{ backgroundImage: 'url(' + banner.image_url + ')' }"></div>-->
-                        <!--    </router-link>-->
-                        <!--    <div v-else class="banner_image" v-bind:style="{ backgroundImage: 'url(' + banner.image_url + ')' }"></div>-->
-                        <!--</div>-->
+                        <div v-if="homeBanners" v-for="banner in homeBanners">
+                            <router-link v-if="banner.url" :to="banner.url" class="">
+                                <div class="banner_image" v-bind:style="{ backgroundImage: 'url(' + banner.image_url + ')' }"></div>
+                            </router-link>
+                            <div v-else class="banner_image" v-bind:style="{ backgroundImage: 'url(' + banner.image_url + ')' }"></div>
+                        </div>
                         
                         <!-- STATIC BANNERS -->
-                        <div class="banner_image" v-bind:style="{ backgroundImage: 'url(//codecloud.cdn.speedyrails.net/sites/5a85d4e06e6f64348f070000/image/jpeg/1519665627000/home1.jpg)' }"></div>
+                        <!--<div class="banner_image" v-bind:style="{ backgroundImage: 'url(//codecloud.cdn.speedyrails.net/sites/5a85d4e06e6f64348f070000/image/jpeg/1519665627000/home1.jpg)' }"></div>-->
                     
-                        <div class="banner_image" v-bind:style="{ backgroundImage: 'url(//codecloud.cdn.speedyrails.net/sites/5a85d4e06e6f64348f070000/image/jpeg/1519665623000/home2.jpg)' }"></div>
+                        <!--<div class="banner_image" v-bind:style="{ backgroundImage: 'url(//codecloud.cdn.speedyrails.net/sites/5a85d4e06e6f64348f070000/image/jpeg/1519665623000/home2.jpg)' }"></div>-->
                     
-                        <div class="banner_image" v-bind:style="{ backgroundImage: 'url(//codecloud.cdn.speedyrails.net/sites/5a85d4e06e6f64348f070000/image/jpeg/1519665619000/home3.jpg)' }"></div>
+                        <!--<div class="banner_image" v-bind:style="{ backgroundImage: 'url(//codecloud.cdn.speedyrails.net/sites/5a85d4e06e6f64348f070000/image/jpeg/1519665619000/home3.jpg)' }"></div>-->
                         <!-- *** -->
                         
                     </slick>
@@ -61,22 +60,21 @@
                 </div>
                 <div class="main_container">
                     <div v-if="featureItems" class="feature_item_container">
-                        <!-- DYNAMIC FEATURE ITEMS -->
-                        <!--<div v-for="item in featureItems" class="feature_item">-->
-                        <!--    <img :src="item.image_url" />-->
-                        <!--</div>-->
+                        <div v-for="item in featureItems" class="feature_item">
+                            <img :src="item.image_url" />
+                        </div>
                         
                         <!-- STATIC FEATURE ITEMS -->
-                        <div class="feature_item">
-                            <a href="/events">
-                                <img src="//codecloud.cdn.speedyrails.net/sites/5a85d4e06e6f64348f070000/image/jpeg/1521823190000/feature-events.jpg" />
-                            </a>
-                        </div>
-                        <div class="feature_item">
-                            <a href="/kids_club">
-                                <img src="//codecloud.cdn.speedyrails.net/sites/5a85d4e06e6f64348f070000/image/jpeg/1521823189000/feature-kids.jpg" />
-                            </a>
-                        </div>
+                        <!--<div class="feature_item">-->
+                        <!--    <a href="/events">-->
+                        <!--        <img src="//codecloud.cdn.speedyrails.net/sites/5a85d4e06e6f64348f070000/image/jpeg/1521823190000/feature-events.jpg" />-->
+                        <!--    </a>-->
+                        <!--</div>-->
+                        <!--<div class="feature_item">-->
+                        <!--    <a href="/kids_club">-->
+                        <!--        <img src="//codecloud.cdn.speedyrails.net/sites/5a85d4e06e6f64348f070000/image/jpeg/1521823189000/feature-kids.jpg" />-->
+                        <!--    </a>-->
+                        <!--</div>-->
                         <!-- *** -->
                     </div>
                     <div class="row home_map_container hidden-lg hidden-md visible-sm-block visible-xs-block">
