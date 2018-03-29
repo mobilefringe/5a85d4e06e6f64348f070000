@@ -141,7 +141,7 @@
                         this.show_menu = false;
                     } else {
                         this.show_menu = true;
-                        document.body.classList.remove("no-scroll");
+                        // document.body.classList.remove("no-scroll");
                     }
                 },
                 show_menu: function() {
