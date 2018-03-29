@@ -145,7 +145,7 @@
                     }
                 },
                 show_menu: function() {
-                    if(this.show_menu == true){
+                    if(this.show_menu == true && this.windowWidth <= 768){
                         document.body.classList.add("no-scroll");
                     } else if (this.show_menu == false) {
                         document.body.classList.remove("no-scroll");
