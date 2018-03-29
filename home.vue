@@ -11,15 +11,6 @@
                             </router-link>
                             <div v-else class="banner_image" v-bind:style="{ backgroundImage: 'url(' + banner.image_url + ')' }"></div>
                         </div>
-                        
-                        <!-- STATIC BANNERS -->
-                        <!--<div class="banner_image" v-bind:style="{ backgroundImage: 'url(//codecloud.cdn.speedyrails.net/sites/5a85d4e06e6f64348f070000/image/jpeg/1519665627000/home1.jpg)' }"></div>-->
-                    
-                        <!--<div class="banner_image" v-bind:style="{ backgroundImage: 'url(//codecloud.cdn.speedyrails.net/sites/5a85d4e06e6f64348f070000/image/jpeg/1519665623000/home2.jpg)' }"></div>-->
-                    
-                        <!--<div class="banner_image" v-bind:style="{ backgroundImage: 'url(//codecloud.cdn.speedyrails.net/sites/5a85d4e06e6f64348f070000/image/jpeg/1519665619000/home3.jpg)' }"></div>-->
-                        <!-- *** -->
-                        
                     </slick>
                     <div class="home_banner_wrapper">
                         <div class="home_hours">
@@ -63,19 +54,6 @@
                         <div v-for="item in featureItems" class="feature_item">
                             <img :src="item.image_url" />
                         </div>
-                        
-                        <!-- STATIC FEATURE ITEMS -->
-                        <!--<div class="feature_item">-->
-                        <!--    <a href="/events">-->
-                        <!--        <img src="//codecloud.cdn.speedyrails.net/sites/5a85d4e06e6f64348f070000/image/jpeg/1521823190000/feature-events.jpg" />-->
-                        <!--    </a>-->
-                        <!--</div>-->
-                        <!--<div class="feature_item">-->
-                        <!--    <a href="/kids_club">-->
-                        <!--        <img src="//codecloud.cdn.speedyrails.net/sites/5a85d4e06e6f64348f070000/image/jpeg/1521823189000/feature-kids.jpg" />-->
-                        <!--    </a>-->
-                        <!--</div>-->
-                        <!-- *** -->
                     </div>
                     <div class="row home_map_container hidden-lg hidden-md visible-sm-block visible-xs-block">
                         <div class="col-sm-8 col-sm-offset-2">
@@ -98,6 +76,7 @@
         </transition>
     </div>
 </template>
+
 <script>
     define(["Vue", "vuex", "moment", "moment-timezone", "vue-moment", "vue-meta", "vue!vue-slick", "vue-select", "jquery", "Raphael", "mm_mapsvg", "mousewheel", "vue!svg-map"], function (Vue, Vuex, moment, tz, VueMoment, Meta, slick, VueSelect, $, Raphael, mapSvg, mousewheel, SVGMapComponent) {
         Vue.use(Meta);
