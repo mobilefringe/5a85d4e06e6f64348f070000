@@ -111,6 +111,7 @@
                     _.forEach(this.currentStore.store_hours, function (value, key) {
                         storeHours.push(vm.findHourById(value));
                     });
+                    storeHours = _.orderBy(storeHours, function(o) { return o.day_of_week; });
                     return storeHours;    
                 },
                 getSVGurl () {
