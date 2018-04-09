@@ -1644,6 +1644,8 @@ footer {
         -webkit-flex-direction: column;
         -ms-flex-direction: column;
         flex-direction: column;
+        [class*="col-"] { 
+        }
     }
     .store_col_count {
         -webkit-flex-wrap: nowrap;
