@@ -1644,6 +1644,7 @@ footer {
         -webkit-flex-wrap: nowrap;
         -ms-flex-wrap: nowrap;
         flex-wrap: nowrap;
+        max-height: 100%;
         .store_index_container {
             width: 100%;
         }
