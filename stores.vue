@@ -11,14 +11,14 @@
                         <div class="col-md-3 col-xs-12">
                             <a class="store_nav_link active_store_nav" href="/stores">Directory</a>
                         </div>
-                        <div class="col-md-3">
+                        <div class="col-md-3 col-xs-12">
                             <a class="store_nav_link" href="/map">Centre Map</a>
                         </div>
-                        <div class="col-md-3">
+                        <div class="col-md-3 col-xs-12">
                             <span>Sort By: </span>
                             <a class="store_nav_link" v-on:click="changeMode('alphabetical')">Alphabetical</a>
                         </div>
-                        <div class="col-md-3">
+                        <div class="col-md-3 col-xs-12">
                             <v-select v-if="dropDownCats" v-model="selectedCat" :options="dropDownCats" :searchable="false" :on-change="filteredByCategory" class="category-select" :placeholder="$t('stores_page.sort_by_cats')" id="selectByCat"></v-select>
                         </div>
                     </div>
