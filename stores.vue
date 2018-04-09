@@ -6,7 +6,7 @@
         </transition>
         <transition name="fade">
             <div v-if="dataLoaded" v-cloak class="main_container margin_30">
-                <div class="hidden_phone">
+                <div class="">
                     <div class="row store_nav">
                         <div class="col-md-3">
                             <a class="store_nav_link active_store_nav" href="/stores">Directory</a>
