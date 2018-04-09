@@ -1642,6 +1642,9 @@ footer {
     /* *** STORES *** */
     .store_col_count .store_index_container {
         width: 100%;
+         -webkit-flex-wrap: nowrap;
+        -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
     }
     /* *** STORE DETAILS *** */
     .store_details_container .store_details_logo {
