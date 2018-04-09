@@ -1639,7 +1639,8 @@ footer {
         width: 110px;
         float: none;
     }
-    /* *** STORES *** */.store_nav {
+    /* *** STORES *** */
+    .store_nav {
         -webkit-flex-direction: column;
         -ms-flex-direction: column;
         flex-direction: column;
