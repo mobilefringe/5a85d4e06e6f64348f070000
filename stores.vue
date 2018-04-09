@@ -37,8 +37,8 @@
                                         {{store.name}}
                                     </router-link>
                                     <span v-if="store.is_new_store" class="pull-right new_store"><span class="hidden_phone">NEW</span><span></span></span>
-                                    <span v-if="store.is_coming_soon_store" class="pull-right coming_soon_store">COMING SOON</span>
-                                    <span v-if="store.promotions != null" class="promo_exist pull-right">PROMOTION</span>
+                                    <span v-if="store.is_coming_soon_store" class="pull-right coming_soon_store"><span class="hidden_phone">COMING SOON</span><span></span></span>
+                                    <span v-if="store.promotions != null" class="promo_exist pull-right"><span class="hidden_phone">PROMOTION</span><span></span></span>
                                 </div>
                             </div>
                         </div>
