@@ -1645,7 +1645,7 @@ footer {
         -ms-flex-direction: column;
         flex-direction: column;
         [class*="col-"] { 
-            
+            margin- 20px
         }
     }
     .store_col_count {
