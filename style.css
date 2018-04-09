@@ -1640,9 +1640,9 @@ footer {
         float: none;
     }
     /* *** STORES *** */
-    .store_col_count .store_index_container {
-        width: 100%;
-    }
+    // .store_col_count .store_index_container {
+    //     width: 100%;
+    // }
     /* *** STORE DETAILS *** */
     .store_details_container .store_details_logo {
         margin: 0 auto;
