@@ -6,7 +6,7 @@
         </transition>
         <transition name="fade">
             <div v-if="dataLoaded" v-cloak class="main_container margin_30">
-                <div class="hidden_phone hidden_now">
+                <div class="hidden_phone">
                     <div class="row store_nav">
                         <div class="col-md-3">
                             <a class="store_nav_link active_store_nav" href="/stores">Directory</a>
@@ -44,18 +44,18 @@
                         </div>
                     </div>
                 </div>
-                <div class="hidden-lg hidden-md visible-sm-block visible-xs-block">
-                    <div class="row hidden-lg hidden-md visible-sm-block visible-xs-block">
-                        <div class="col-md-12 mobile_store_select">
-                            <v-select v-if="allStores" :options="allStores" :placeholder="'Select A Store'" :searchable="false" :label="'name'" :on-change="dropPin"></v-select> 
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-12">
-                            <svg-map ref="svgRef" v-bind:svgMapUrl="getSVGurl" :regions="regions"></svg-map>
-                        </div>
-                    </div>    
-                </div>
+                <!--<div class="hidden-lg hidden-md visible-sm-block visible-xs-block">-->
+                <!--    <div class="row hidden-lg hidden-md visible-sm-block visible-xs-block">-->
+                <!--        <div class="col-md-12 mobile_store_select">-->
+                <!--            <v-select v-if="allStores" :options="allStores" :placeholder="'Select A Store'" :searchable="false" :label="'name'" :on-change="dropPin"></v-select> -->
+                <!--        </div>-->
+                <!--    </div>-->
+                <!--    <div class="row">-->
+                <!--        <div class="col-md-12">-->
+                <!--            <svg-map ref="svgRef" v-bind:svgMapUrl="getSVGurl" :regions="regions"></svg-map>-->
+                <!--        </div>-->
+                <!--    </div>    -->
+                <!--</div>-->
             </div>
         </transition>
     </div>
