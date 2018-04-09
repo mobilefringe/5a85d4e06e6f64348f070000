@@ -8,7 +8,7 @@
             <div v-if="dataLoaded" v-cloak class="main_container margin_30">
                 <div class="">
                     <div class="row store_nav">
-                        <div class="col-md-3">
+                        <div class="col-md-3 col-xs-12">
                             <a class="store_nav_link active_store_nav" href="/stores">Directory</a>
                         </div>
                         <div class="col-md-3">
