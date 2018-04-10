@@ -199,7 +199,7 @@
                     }
                     
                 },
-                killTransition () {
+                killTransition el, done {
                     console.log("enter");
                     done();
                 }
