@@ -35,7 +35,7 @@
                             </div>
                         </div>
                     </div>
-                    <transition name="custom-classes-transition" enter-active-class="animated slideInRight" leave-active-class="animated slideOutRight">
+                    <transition name="custom-classes-transition" enter-active-class="animated slideInRight" leave-active-class="animated slideOutRight" v-clock>
                         <nav id="primary_nav" v-if="show_menu" v-on:keyup.esc="show_menu = false">
                             <div class="todays_hours" v-if="todays_hours">
                                 <span v-if="!todays_hours.is_closed">
