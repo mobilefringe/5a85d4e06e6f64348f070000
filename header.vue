@@ -200,7 +200,8 @@
                     
                 },
                 killTransition () {
-                    
+                    console.log("enter");
+                    done();
                 }
             },
             beforeDestroy: function() {
