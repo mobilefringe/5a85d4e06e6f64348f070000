@@ -198,6 +198,9 @@
                         this.showSubMenu3 = true 
                     }
                     
+                },
+                killTransition () {
+                    
                 }
             },
             beforeDestroy: function() {
