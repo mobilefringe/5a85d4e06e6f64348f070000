@@ -198,6 +198,9 @@
                         this.showSubMenu3 = true 
                     }
                     
+                },
+                enterCancelled: function (el) {
+                    console.log("enter is cancelled");
                 }
             },
             beforeDestroy: function() {
