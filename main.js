@@ -128,11 +128,7 @@ require(['Vue', 'vuex', 'vue2-filters', 'vue_router', 'routes', 'vuex-router-syn
             // utility method to allow user to change locale value
             changeLocale: function(val) {
                 this.locale = val; // this will update the data store, which in turn will trigger the watcher to update the locale in the system
-            },
-            enterCancelled: function (el) {
-                console.log("enter is cancelled");
-            },
-
+            }
         },
         router: router,
         store,
