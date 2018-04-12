@@ -2,7 +2,7 @@
     <footer>
         <section class="footer_logo">
             <div>
-                <a href="http://bentallkennedy.com"><img alt="Property Logo" class="site_logo" src="//codecloud.cdn.speedyrails.net/sites/5a85d4e06e6f64348f070000/image/png/1522078168000/ProudlyManaged_V_dark_web.png"/>    </a>
+                <a href="http://bentallkennedy.com"><img alt="Bentall Kennedy Logo" class="site_logo" src="//codecloud.cdn.speedyrails.net/sites/5a85d4e06e6f64348f070000/image/png/1522078168000/ProudlyManaged_V_dark_web.png"/>    </a>
             </div>
             <div class="footer_social">
                 <div class="social_icons">
