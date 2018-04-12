@@ -28,6 +28,7 @@
                         </div>
                         <div class="header_newsletter">
                             <div class="header_newsletter_container">
+                                <label for="header_newsletter" class="hidden_now">Email</label>
                                 <input id="header_newsletter" class="newsletter_input" type="text" placeholder="Join Our Newsletter!" v-model="newsletter_email"/>
                                 <router-link :to="'/newsletter?email='+ newsletter_email" >
                                     <input id="header_newsletter_submit" class="newsletter_btn" type="submit" value="Subscribe"/>
