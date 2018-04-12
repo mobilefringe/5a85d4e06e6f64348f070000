@@ -31,7 +31,7 @@
                                 <label for="header_newsletter" class="hidden_now">Email</label>
                                 <input id="header_newsletter" class="newsletter_input" type="text" placeholder="Join Our Newsletter!" v-model="newsletter_email"/>
                                 <router-link :to="'/newsletter?email='+ newsletter_email" >
-                                    <label for="header_newsletter_submit">Submit</label>
+                                    <label for="header_newsletter_submit"  class="hidden_now">Submit</label>
                                     <input id="header_newsletter_submit" class="newsletter_btn" type="submit" value="Subscribe"/>
                                 </router-link>
                             </div>
