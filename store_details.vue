@@ -29,7 +29,7 @@
                     <div class="row">
                         <div class="col-md-4">
                             <div class="store_details_logo">
-                                <img v-if="currentStore.store_front_url_abs" :src="currentStore.store_front_url_abs" :alt="currentStore.name + ' Logo'"/>
+                                <img :src="currentStore.store_front_url_abs" :alt="currentStore.name + ' Logo'"/>
                             </div>
                         </div>
                         <div class="col-md-8">
