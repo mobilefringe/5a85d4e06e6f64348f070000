@@ -120,8 +120,9 @@ require(['Vue', 'vuex', 'vue2-filters', 'vue_router', 'routes', 'vuex-router-syn
                     await this.$store.dispatch('initializeApi', { site: "milton", version: "v4" });
                     await Promise.all([this.$store.dispatch("getData", "property")]);
                     // this.property.mm_host = this.property.mm_host.replace("http:", "");
-                    // await Promise.all([this.$store.dispatch("LOAD_META_DATA")]);
+                    
                     let results = await Promise.all([this.$store.dispatch("INITIALIZE_LOCALE"), this.$store.dispatch("getData", "hours"), this.$store.dispatch("getData", "stores")]);
+                    await Promise.all([this.$store.dispatch("LOAD_META_DATA")]);
                 } catch (e) {
                     console.log("Error loading data: " + e.message);    
                 }
