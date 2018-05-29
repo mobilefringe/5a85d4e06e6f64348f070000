@@ -1,0 +1,149 @@
+<template>
+    <div> <!-- without an outer container div this component template will not render -->
+        <loading-spinner v-if="!dataLoaded"></loading-spinner>
+        <transition name="fade">
+            <inside-header-component></inside-header-component>
+        </transition>
+        <transition name="fade">
+            <div v-if="dataLoaded" v-cloak class="main_container margin_30">
+                <div v-if="currentStore" class="store_details_container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h1 class="store_details_name">{{ currentStore.name }}</h1>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-8">
+                            <p class="store_details_phone">
+                                <span v-if="currentStore.phone">{{ currentStore.phone}}</span>
+                                <span v-if="currentStore.website"> | <a :href="'http://' + currentStore.website" target="_blank">Visit Website</a></span>
+                            </p>
+                        </div>
+                        <div class="col-md-4 text-right hidden_phone">
+                            <p v-if="currentStore.categories" class="store_details_categories">
+                                Category: <span>{{ storeCategory }}</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="margin_40"></div>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="store_details_logo">
+                                <img v-if="currentStore.store_front_url_abs" :src="currentStore.store_front_url_abs" :alt="currentStore.name + ' Logo'"/>
+                            </div>
+                        </div>
+                        <div class="col-md-8">
+                            <div id="map">
+                                <svg-map ref="svgmapRef"  @updateMap="updateSVGMap" :svgMapUrl="getSVGurl" ></svg-map>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="margin_40"></div>
+                    <div class="row">
+                        <div class="col-md-4 col-md-push-8">
+                            <p class="store_details_hour_title">Store Hours</p>
+                            <ul class="store_details_hours">
+                                <li v-for="hour in storeHours">
+                                    {{hour.day_of_week | moment("dddd", timezone)}} - {{hour.open_time | moment("h:mm A", timezone)}} - {{hour.close_time | moment("h:mm A", timezone)}}
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="hidden-lg hidden-md visible-sm-block visible-xs-block">
+                            <div class="col-md-12">
+                                <hr>    
+                            </div>
+                        </div>
+                        <div class="col-md-8 col-md-pull-4">
+                            <div class="store_details_desc" v-html="currentStore.rich_description"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </transition>
+    </div>
+</template>
+
+<script>
+    define(["Vue", "vuex", "vue-meta", "jquery", "Raphael", "mm_mapsvg", "mousewheel", "vue!svg-map"], function (Vue, Vuex, Meta, $, Raphael, mapSvg, mousewheel,SVGMapComponent) {
+        Vue.use(Meta);
+        return Vue.component("store-details-component", {
+            template: template, // the variable template will be injected,
+            props: ['id'],
+            data: function () {
+                return {
+                    dataLoaded: false,
+                    currentStore: null,
+                    map: null,
+                    hours: []
+                }
+            },
+            props:['id'],
+            created (){
+                window.Raphael = Raphael; // our mapSvg plugin is stupid and outdated. need this hack to tie Raphael to window object (global variable)
+                
+                this.loadData().then(response => {
+                    this.dataLoaded = true;
+                    this.updateCurrentStore(this.id);
+                });
+            },
+            watch: {
+                $route: function () {
+                    this.updateCurrentStore(this.$route.params.id);
+                }
+            },
+            computed: {
+                ...Vuex.mapGetters([
+                    'property',
+                    'timezone',
+                    'stores',
+                    'findStoreBySlug',
+                    'findCategoryById',
+                    'findHourById'
+                ]),
+                storeCategory() {
+                    var currentStoreCategory = this.currentStore.categories[0];
+                    category = this.findCategoryById(currentStoreCategory)
+                    return category.name
+                },
+                storeHours() {
+                    var vm = this;
+                    var storeHours = [];
+                    _.forEach(this.currentStore.store_hours, function (value, key) {
+                        storeHours.push(vm.findHourById(value));
+                    });
+                    storeHours = _.orderBy(storeHours, function(o) { return o.day_of_week; });
+                    return storeHours;    
+                },
+                getSVGurl () {
+                    return "https://www.mallmaverick.com" + this.property.svgmap_url;
+                },
+                svgMapRef () {
+                    return this.$refs.svgmapRef;
+                }
+            },
+            methods: {
+                loadData: async function () {
+                    try {
+                        let results = await Promise.all([this.$store.dispatch("getData", "categories")]);
+                    } catch (e) {
+                        console.log("Error loading data: " + e.message);
+                    }
+                },
+                updateCurrentStore(id) {
+                    this.currentStore = this.findStoreBySlug(id);
+                    if (this.currentStore === null || this.currentStore === undefined) {
+                        this.$router.replace({ name: 'stores' });
+                    }
+                },
+                updateSVGMap (map) {
+                    this.map = map;
+                    this.dropPin();
+                },
+                dropPin () {
+                    this.svgMapRef.addMarker(this.currentStore,'//codecloud.cdn.speedyrails.net/sites/589e308f6e6f641b9f010000/image/png/1484850466000/show_pin.png');
+                    this.svgMapRef.setViewBox(this.currentStore)
+                } 
+            }
+        });
+    });
+</script>
