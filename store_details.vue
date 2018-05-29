@@ -89,6 +89,11 @@
             watch: {
                 $route: function () {
                     this.updateCurrentStore(this.$route.params.id);
+                },
+                currentStore: function () {
+                    if (_.includes(this.currentStore.store_front_url_abs, 'missing')) {
+                        this.currentStore.store_front_url_abs = "//codecloud.cdn.speedyrails.net/sites/5acbda8d6e6f64670f1a0000/image/png/1527612896000/milton_logo.png"
+                    }
                 }
             },
             computed: {
