@@ -109,7 +109,8 @@ require(['Vue', 'vuex', 'vue2-filters', 'vue_router', 'routes', 'vuex-router-syn
                 }
             },
             ...Vuex.mapGetters([
-                'dataLoaded'
+                'dataLoaded',
+                'property'
             ])
         },
         methods: {
