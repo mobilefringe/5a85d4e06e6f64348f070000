@@ -88,7 +88,6 @@ require(['Vue', 'vuex', 'vue2-filters', 'vue_router', 'routes', 'vuex-router-syn
         },
         created: function ()  {
             this.loadData().then(response => {
-                // this.property.mm_host = this.property.mm_host.replace("http:", "");
                 this.$store.dispatch("setDataLoaded", true);      
             });
         },
