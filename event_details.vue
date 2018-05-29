@@ -72,8 +72,8 @@
 			},
 			watch: {
 				currentEvent: function() {
-				    if (_.includes(currentEvent.image_url, 'missing')) {
-                        currentEvent.image_url = "//codecloud.cdn.speedyrails.net/sites/5acbda8d6e6f64670f1a0000/image/png/1527612896000/milton_logo.png";
+				    if (_.includes(this.currentEvent.image_url, 'missing')) {
+                        this.currentEvent.image_url = "//codecloud.cdn.speedyrails.net/sites/5acbda8d6e6f64670f1a0000/image/png/1527612896000/milton_logo.png";
                     }
 					if (this.currentEvent.eventable_type == "Store") {
 						var vm = this;
