@@ -16,17 +16,17 @@
                                 <img v-lazy="promo.image_url" :alt="promo.name" />
                             </a>
                         </div>
-                        <!--<router-link :to="{ name: 'storeDetails', params: { id: promo.store.slug }}">-->
+                        <router-link :to="{ name: 'storeDetails', params: { id: promo.store.slug }}">
                             <span class="promo_store_name">{{ promo.store.name }}</span>
-                        <!--</router-link>-->
+                        </router-link>
                         <h3 class="promo_name">{{ promo.name }}</h3>
                         <p class="promo_date" v-if="isMultiDayEvent(promo)">
                             {{ promo.start_date | moment("MMM D", timezone)}} to {{ promo.end_date | moment("MMM D", timezone)}}
                         </p>
                         <p class="promo_date" v-else>{{ promo.start_date | moment("MMM D", timezone)}}</p>
-                        <!--<router-link :to="{ name: 'promotionDetails', params: { id: promo.slug }}">-->
+                        <router-link :to="{ name: 'promotionDetails', params: { id: promo.slug }}">
                             <span class="promo_read_more">Read More</span>
-                        <!--</router-link>-->
+                        </router-link>
                     </div>
                 </div>
             </div>
@@ -65,10 +65,10 @@
                         var showOnWebDate = moment.tz(value.show_on_web_date, this.timezone).format();
                         if (today >= showOnWebDate) {
                             if (value.store != null && value.store != undefined && _.includes(value.store.image_url, 'missing')) {
-                                value.store.image_url = "http://placehold.it/400x400";
+                                value.store.image_url = "https://placehold.it/400x400";
                             }
                             if (_.includes(value.image_url, 'missing')) {
-                                value.image_url = "http://placehold.it/400x400";
+                                value.image_url = "https://placehold.it/400x400";
                             }
                             showPromos.push(value);
                         }
