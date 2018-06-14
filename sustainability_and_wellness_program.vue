@@ -76,7 +76,7 @@
             methods: {
                 loadData: async function () {
                     try {
-                        let results = await Promise.all([this.$store.dispatch("getData", "events")]);
+                        let results = await Promise.all([this.$store.dispatch("getData", "promotions")]);
                         return results;
                     } catch (e) {
                         console.log("Error loading data: " + e.message);
