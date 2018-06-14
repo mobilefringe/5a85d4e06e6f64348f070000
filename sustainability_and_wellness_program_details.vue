@@ -108,7 +108,7 @@
                     return truncate;
                 },
 				shareURL(slug) {
-                    var share_url = "https://www.miltonmall.com/events/" + slug
+                    var share_url = "https://www.miltonmall.com/sustainability_and_wellness_program/" + slug
                     return share_url
                 }
 			}
