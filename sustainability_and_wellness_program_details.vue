@@ -61,7 +61,7 @@
 			},
 			created() {
 				this.$store.dispatch("getData", "promotions").then(response => {
-					this.currentEvent = this.findEventBySlug(this.id);
+					this.currentEvent = this.findPromoBySlug(this.id);
 					if (this.currentEvent === null || this.currentEvent === undefined) {
 						this.$router.replace({ name: '404' });
 					}
