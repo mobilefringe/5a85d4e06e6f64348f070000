@@ -2,7 +2,7 @@
     <div class="inside_header_background">
         <div class="main_container">
             <div class="hours_container">
-                <h3 class="hours_title">Hours</h3>
+                <h2 class="hours_title">Hours</h2>
                 <div>
                     <p>
                         Monday - Friday:<br/>
