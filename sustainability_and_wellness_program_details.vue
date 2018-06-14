@@ -90,7 +90,7 @@
 					'property',
 					'timezone',
 					'processedEvents',
-					'findEventBySlug',
+					'findPromoBySlug'
 				])
 			},
 			methods: {
