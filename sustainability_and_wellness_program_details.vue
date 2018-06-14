@@ -49,7 +49,7 @@
         Vue.use(Lightbox);
         Vue.use(VueLazyload);
         Vue.component('social-sharing', SocialSharing);
-		return Vue.component("event-details-component", {
+		return Vue.component("sustainabilty-details-component", {
 			template: template, // the variable template will be injected,
 			props: ['id'],
 			data: function() {
