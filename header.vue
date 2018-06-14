@@ -34,6 +34,7 @@
                                 <router-link :to="'/newsletter?email='+ newsletter_email">
                                     <!--<label for="header_newsletter_submit"  class="hidden_now">Submit</label>-->
                                     <input id="header_newsletter_submit" class="newsletter_btn" type="submit" value="Subscribe"/>
+                                    <p style="display:none;">Subscribe</p>
                                 </router-link>
                             </div>
                         </div>
