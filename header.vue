@@ -22,7 +22,7 @@
                                 <span v-for="item in social_media" v-if="social_media">
                                     <a :href="item.url" target="_blank">
                                         <i :class="item.iconClass" aria-hidden="true"></i>
-                                        <p style="display:none;">{{item}}</p>
+                                        <p style="display:none;">{{item.name}}</p>
                                     </a>
                                 </span>
                             </div>
