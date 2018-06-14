@@ -89,7 +89,6 @@
 				...Vuex.mapGetters([
 					'property',
 					'timezone',
-					'processedPromos',
 					'findPromoBySlug'
 				])
 			},
