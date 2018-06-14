@@ -10,7 +10,7 @@
                     <div class="row">
                         <div class="col-md-6">
                             <a :href="currentEvent.image_url" :data-lightbox="currentEvent.name">
-                                <img v-lazy="currentEvent.image_url" :alt="currentEvent.name"/>
+                                <img :src="currentEvent.image_url" :alt="currentEvent.name"/>
                             </a>
                         </div>
                         <div class="col-md-6">
