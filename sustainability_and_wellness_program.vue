@@ -66,6 +66,7 @@
                             } else {
                                 value.description = _.truncate(value.description, { 'length': 50, 'separator': ' ' });    
                             }
+                            if(value.is_special_promo) {
                             showEvents.push(value);
                         }
                     });
