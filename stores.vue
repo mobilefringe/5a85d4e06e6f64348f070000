@@ -9,7 +9,7 @@
                 <div class="">
                     <div class="row store_nav">
                         <div class="col-md-3 col-xs-12">
-                            <a class="store_nav_link active_store_nav" href="/stores">Directory</a>
+                            <a class="store_nav_link active_store_nav" href="#">Directory</a>
                         </div>
                         <div class="col-md-3 col-xs-12">
                             <a class="store_nav_link" href="/map">Centre Map</a>
@@ -94,7 +94,7 @@
                     'findCategoryById'
                 ]), 
                 allStores() {
-                    return _.filter(stores, function(o) { return o.name != "Bentall Kennedy Store" });
+                    return _.filter(this.processedStores, function(o) { return o.name != "Bentall Kennedy Store" });
                 },
                 dropDownCats() {
                     var cats = _.map(this.processedCategories, 'name');
