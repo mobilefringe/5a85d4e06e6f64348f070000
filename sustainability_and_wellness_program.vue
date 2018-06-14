@@ -48,10 +48,10 @@
                 ...Vuex.mapGetters([
                     'property',
                     'timezone',
-                    'processedEvents',
+                    'processedPromos',
                 ]),
                 events: function events() {
-                    var events = this.processedEvents;
+                    var events = this.processedPromos;
                     var showEvents = [];
                     _.forEach(events, function (value, key) {
                         var today = moment.tz(this.timezone).format();
