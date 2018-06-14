@@ -16,7 +16,7 @@
                         <div class="col-md-6">
                             <h2 class="event_name">{{ currentEvent.name }}</h2>
                             <p class="dates" v-if="isMultiDayEvent(currentEvent)">
-                                {{ currentEvent.start_date | moment("MMM D", timezone)}} to {{ currentEvent.end_date | moment("MMM D", timezone)}}
+                                {{ currentEvent.start_date | moment("MMM D", timezone)}}
                             </p>
                             <p class="dates" v-else>{{ currentEvent.start_date | moment("MMM D", timezone)}}</p>
                             <div class="event_desc" v-html="currentEvent.rich_description"></div>
