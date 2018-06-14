@@ -70,7 +70,7 @@
                             if (_.includes(value.image_url, 'missing')) {
                                 value.image_url = "https://placehold.it/400x400";
                             }
-                            value.name = _.truncate(value.name, { 'length': 50, 'separator': ' ' });
+                            value.name = _.truncate(value.name, { 'length': 30, 'separator': ' ' });
                             showPromos.push(value);
                         }
                     });
