@@ -22,7 +22,7 @@
                                 <div class="col-md-12">
                                     <social-sharing v-if="currentPromo" :url="shareURL(currentPromo.slug)" :title="currentPromo.title" :description="currentPromo.body" :quote="truncate(currentPromo.body)" twitter-user="MiltonMall" :media="currentPromo.image_url" inline-template>
                                         <div class="social_share">
-                                             <p class="text-uppercase" style="margin-top: 10px; margin-bottom: 10px;">Share</p>
+                                            <p class="text-uppercase" style="margin-top: 10px; margin-bottom: 10px;">Share</p>
                                             <network network="facebook">
                                                 <i class="fa fa-facebook-square"></i>
                                             </network>
