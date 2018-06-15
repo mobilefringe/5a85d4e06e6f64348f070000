@@ -20,7 +20,7 @@
     							</div>
     							<div class="col-sm-6 col-xs-12" :class="{'has-error': errors.has('operatingName')}">
     								<label for="operatingName">Operating Name of Organization(if different)</label>
-    								<input v-model="form_data.operatingName" class="form-control" :class="{'input': true}" name="operatingName" type="text" placeholder="Operating Name of Organization" data-vv-delay="500">
+    								<input v-model="form_data.operatingName" class="form-control" :class="{'input': true}" name="operatingName" type="text" placeholder="Operating Name of Organization" data-vv-delay="500" id="operatingName">
     								<span v-show="errors.has('operatingName')" class="form-control-feedback">{{ errors.first('operatingName') }}</span>
     							</div>
     						</div>
