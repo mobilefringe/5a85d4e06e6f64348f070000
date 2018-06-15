@@ -19,7 +19,7 @@
                         <router-link :to="{ name: 'storeDetails', params: { id: promo.store.slug }}">
                             <span class="promo_store_name">{{ promo.store.name }}</span>
                         </router-link>
-                        <h3 class="promo_name">{{ promo.name }}</h3>
+                        <h2 class="promo_name">{{ promo.name }}</h2>
                         <p class="promo_date" v-if="isMultiDayEvent(promo)">
                             {{ promo.start_date | moment("MMM D", timezone)}} to {{ promo.end_date | moment("MMM D", timezone)}}
                         </p>
@@ -71,7 +71,7 @@
                                 value.image_url = "https://placehold.it/400x400";
                             }
                             value.name = _.truncate(value.name, { 'length': 30, 'separator': ' ' });
-                            if(value.is_special_promo) {
+                            if(!value.is_special_promo) {
                                 showPromos.push(value);
                             }
                             
