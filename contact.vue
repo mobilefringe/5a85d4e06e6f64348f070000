@@ -8,7 +8,7 @@
             <div v-if="dataLoaded" v-cloak class="main_container margin_30">
                 <div class="row">
                     <div class="col-sm-6">
-                        <h3 class="contact_page_title">Centre Information</h3>
+                        <h2 class="contact_page_title">Centre Information</h2>
                         <p class="directory_content">
                             {{ property.name }}<br/>
                             {{ property.address1 }}<br/>
