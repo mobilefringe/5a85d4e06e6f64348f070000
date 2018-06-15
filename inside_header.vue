@@ -73,7 +73,7 @@
                         return "About Us"
                     } else if(this.$route.fullPath == "/pages/milton-privacy-policy") {
                         return "Privacy Policy"
-                    } else if(this.$route.fullPath == "/sustainability_and_wellness_program") {
+                    } else if(_.contains(this.$route.fullPath , "/sustainability_and_wellness_program") {
                         return "Sustainability & Wellness Program"
                     } else {
                         return this.$route.meta.pageName     
