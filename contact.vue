@@ -40,7 +40,7 @@
                                 </div>
                                 <div class="col-xs-12" :class="{'has-error': errors.has('subject')}">
                                     <label for="subject">Subject</label>
-                                    <input v-model="form_data.subject" v-validate="'required:true'" class="form-control" :class="{'input': true}" name="subject" type="text" data-vv-delay="1000">
+                                    <input v-model="form_data.subject" v-validate="'required:true'" class="form-control" :class="{'input': true}" name="subject" type="text" data-vv-delay="1000" id="subject">
                                     <span v-show="errors.has('subject')" class="form-control-feedback">{{ errors.first('subject') }}</span>
                                 </div>
                                 <div class="col-xs-12" :class="{'has-error': errors.has('message')}">
