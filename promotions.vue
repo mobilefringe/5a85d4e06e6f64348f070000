@@ -25,7 +25,7 @@
                         </p>
                         <p class="promo_date" v-else>{{ promo.start_date | moment("MMM D", timezone)}}</p>
                         <router-link :to="{ name: 'promotionDetails', params: { id: promo.slug }}">
-                            <span class="promo_read_more">Read More</span>
+                            <span class="promo_read_more">Promotion Details</span>
                         </router-link>
                     </div>
                 </div>
