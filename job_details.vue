@@ -32,7 +32,7 @@
                                 <div class="col-md-12">
                                     <social-sharing v-if="currentJob" :url="shareURL(currentJob.slug)" :title="currentJob.title" :description="currentJob.body" :quote="truncate(currentJob.body)" twitter-user="PickeringTC" :media="currentJob.image_url" inline-template>
                                         <div class="social_share">
-                                            <h5>Share</h5>
+                                            <p class="text-uppercase" style="margin-top: 10px; margin-bottom: 10px;">Share</p>
                                             <network network="facebook">
                                                 <i class="fa fa-facebook-square"></i>
                                             </network>
