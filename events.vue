@@ -11,7 +11,7 @@
                 </div>
                 <div class="events_container" v-if="events.length >= 1" v-for="event in events">
                     <div class="event_left">
-                        <img :src="event.image_url" :alt="event.name + ' image'"/>
+                        <img :src="event.image_url" :alt="event.name"/>
                     </div>
                     <div class="event_right">
                         <h2 class="event_name">{{ event.name }}</h2>
