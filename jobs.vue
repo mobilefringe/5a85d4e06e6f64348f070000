@@ -19,7 +19,7 @@
                     <h2 class="job_name">{{ job.name }}</h2>
                     <p class="job_type">{{job.job_type}}</p>
                     <router-link :to="{ name: 'jobDetails', params: { id: job.slug }}">
-                        <span class="read_more">Read More</span>
+                        <span class="read_more">Job Details</span>
                     </router-link>
                 </div>
             </div>
