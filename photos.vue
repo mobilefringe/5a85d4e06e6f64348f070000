@@ -10,7 +10,7 @@
                     <div v-for="image in images" class="col-md-6 leasing_photo_container">
                         <a :href="image.image_url" :data-lightbox="image.image_url">
                             <div class="leasing_photo" v-lazy:background-image="image.image_url"></div>
-                            <p style="display:none;">{{image.name}}</p>
+                            <p style="display:none;">{{image.id}}</p>
                         </a>
                     </div>
                 </div>
