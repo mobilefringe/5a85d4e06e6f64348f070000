@@ -10,7 +10,7 @@
     				<div class="col-sm-12 contact_contents">
     					<div class="margin_40" v-if="currentPage" v-html="currentPage.body"></div>
     					<form class="form-horizontal padding_top_20" action="form-submit" v-on:submit.prevent="validateBeforeSubmit">
-							<h3 class="hours_heading caps">Business Contact Info</h3>
+							<h2 class="hours_heading caps">Business Contact Info</h2>
 							<hr>
     						<div class="form-group ">
     							<div class="col-sm-6 col-xs-12" :class="{'has-error': errors.has('legalName')}">
