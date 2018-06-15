@@ -36,7 +36,7 @@
                         </div>
                         <div class="col-md-6 col-md-pull-6">
                             <a :href="currentPromo.image_url" :data-lightbox="currentPromo.name">
-                                <img v-lazy="currentPromo.image_url" :alt="currentPromo.name"/>
+                                <img :src="currentPromo.image_url" :alt="currentPromo.name"/>
                             </a>
                         </div>
                     </div>
