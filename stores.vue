@@ -88,7 +88,6 @@
                     'property',
                     'processedStores',
                     'processedCategories',
-                    'storesByAlphaIndex',
                     'storesByCategoryName',
                     'findCategoryByName',
                     'findCategoryById'
