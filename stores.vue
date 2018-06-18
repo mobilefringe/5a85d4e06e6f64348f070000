@@ -96,7 +96,7 @@
                     return _.filter(this.processedStores, function(o) { return o.name != "Bentall Kennedy Store" });
                 },
                 storesByAlphaIndex() {
-                  let stores = getters.processedStores;
+                  let stores = this.allStores;
                   let grouped = _.groupBy(stores, store => (isNaN(_.upperCase(store.name.charAt(0))) ? _.upperCase(store.name.charAt(0)) : "#"));
                   return grouped;
                 },
