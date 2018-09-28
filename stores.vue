@@ -101,6 +101,7 @@
                   return grouped;
                 },
                 dropDownCats() {
+                    console.log(this.processedCategories)
                     var cats = _.map(this.processedCategories, 'name');
                     cats.unshift('All');
                     return cats;
