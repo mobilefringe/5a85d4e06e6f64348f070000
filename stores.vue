@@ -110,9 +110,12 @@
                         }
                     });
                     console.log(full_cats)
-                    var cats = _.map(this.processedCategories, 'name');
-                    cats.unshift('All');
-                    return cats;
+                    var categories = _.map(full_cats, 'name');
+                    categories.unshift('All');
+                    return categories
+                    // var cats = _.map(this.processedCategories, 'name');
+                    // cats.unshift('All');
+                    // return cats;
                 },
                 getSVGurl () {
                     return "https://www.mallmaverick.com" + this.property.svgmap_url;
