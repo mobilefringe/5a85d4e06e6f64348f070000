@@ -102,6 +102,14 @@
                 },
                 dropDownCats() {
                     console.log(this.processedCategories)
+                    var cats = this.processedCategories
+                    full_cats = [];
+                    _.forEach(cats, function( val, key ) {
+                        if (value.store_ids.length > 0) {
+                            full_cats.push(value);    
+                        }
+                    });
+                    console.log(full_cats)
                     var cats = _.map(this.processedCategories, 'name');
                     cats.unshift('All');
                     return cats;
