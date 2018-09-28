@@ -101,7 +101,6 @@
                   return grouped;
                 },
                 dropDownCats() {
-                    console.log(this.processedCategories)
                     var cats = this.processedCategories
                     full_cats = [];
                     _.forEach(cats, function( val, key ) {
@@ -109,13 +108,9 @@
                             full_cats.push(val);    
                         }
                     });
-                    console.log(full_cats)
                     var categories = _.map(full_cats, 'name');
                     categories.unshift('All');
                     return categories
-                    // var cats = _.map(this.processedCategories, 'name');
-                    // cats.unshift('All');
-                    // return cats;
                 },
                 getSVGurl () {
                     return "https://www.mallmaverick.com" + this.property.svgmap_url;
