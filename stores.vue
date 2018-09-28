@@ -105,8 +105,8 @@
                     var cats = this.processedCategories
                     full_cats = [];
                     _.forEach(cats, function( val, key ) {
-                        if (value.store_ids.length > 0) {
-                            full_cats.push(value);    
+                        if (val.store_ids.length > 0) {
+                            full_cats.push(val);    
                         }
                     });
                     console.log(full_cats)
