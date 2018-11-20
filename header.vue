@@ -96,14 +96,15 @@
                                         <router-link tag="li" to="/hours" class="submenu_item" exact>
                                             <a>Hours</a>
                                         </router-link>
+                                        <router-link tag="li" to="/pages/milton-santa" class="submenu_item" exact>
+                                            <a>Santa Hours</a>
+                                        </router-link>
                                         <router-link tag="li" to="/community" class="submenu_item" exact>
                                             <a>Community</a>
                                         </router-link>
                                     </ul>
                                 </li>
-                                 <router-link tag="li" to="/promotions" class="menu_item" exact>
-                                    Promotions
-                                </router-link>
+                               
                             </ul>
                             
                             <div class="mobile_social_icons">
