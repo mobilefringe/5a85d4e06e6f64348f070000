@@ -101,10 +101,11 @@
                                         </router-link>
                                     </ul>
                                 </li>
-                            </ul>
-                             <router-link tag="li" to="/promotions" class="menu_item" exact>
+                                 <router-link tag="li" to="/promotions" class="menu_item" exact>
                                     Promotions
                                 </router-link>
+                            </ul>
+                            
                             <div class="mobile_social_icons">
                                 <span v-for="item in social_media">
                                     <a :href="item.url" target="_blank">
