@@ -47,7 +47,7 @@
         <!--</section>-->
         <section class="footer_privacy">
             <div class="main_container">
-                <p class="footer_desc">&#169; {{copyright_year}} {{property.name}} | Powered By <a href="//mallmaverick.com" target="_blank">Mall Maverick</a> | <a href="/pages/milton-privacy-policy">Privacy Policy</a></p>
+                <p class="footer_desc">&#169; {{copyright_year}} <span v-if="property">{{property.name}}</span> | Powered By <a href="//mallmaverick.com" target="_blank">Mall Maverick</a> | <a href="/pages/milton-privacy-policy">Privacy Policy</a></p>
             </div>
         </section>
     </footer>
