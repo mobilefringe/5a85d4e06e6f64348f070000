@@ -16,7 +16,7 @@
                                 <img v-lazy="promo.image_url" :alt="promo.name" />
                             </a>
                         </div>
-                        <router-link :to="{ name: 'storeDetails', params: { id: promo.store.slug }}">
+                        <router-link v-if="promo.store" :to="{ name: 'storeDetails', params: { id: promo.store.slug }}">
                             <span class="promo_store_name">{{ promo.store.name }}</span>
                         </router-link>
                         <h2 class="promo_name">{{ promo.name }}</h2>
