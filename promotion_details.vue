@@ -9,7 +9,7 @@
                 <div v-if="currentPromo" class="promo_details_container">
                     <div class="row">
                         <div class="col-md-6 col-md-push-6">
-                            <router-link :to="{ name: 'storeDetails', params: { id: currentPromo.store.slug }}">
+                            <router-link v-if="currentPromo.store" :to="{ name: 'storeDetails', params: { id: currentPromo.store.slug }}">
                                 <span class="promo_store_name">{{ currentPromo.store.name }}</span>
                             </router-link>
                             <h2 class="promo_name">{{ currentPromo.name }}</h2>
