@@ -96,9 +96,7 @@
                                         <router-link tag="li" to="/hours" class="submenu_item" exact>
                                             <a>Hours</a>
                                         </router-link>
-                                        <router-link tag="li" to="/pages/milton-santa" class="submenu_item" exact>
-                                            <a>Santa Hours</a>
-                                        </router-link>
+                                      
                                         <router-link tag="li" to="/community" class="submenu_item" exact>
                                             <a>Community</a>
                                         </router-link>
