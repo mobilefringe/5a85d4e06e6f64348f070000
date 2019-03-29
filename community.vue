@@ -209,7 +209,7 @@
                             send_data = {};
                             send_data.url = "https://www.mallmaverick.com/send_contact_email";
                             var formatted_formdata = {}; //JSON.stringify(this.serializeObject(this.form_data));
-                            formatted_formdata.send_to = "caitlin@mobilefringe.com";
+                            formatted_formdata.send_to = "cindy@retaildetail.ca";
                             formatted_formdata.subject = "Milton Mall Community Rental Form Application"; 
                             formatted_formdata.body = {};
                             formatted_formdata.body["Legal Name of Organization"] =  this.form_data.legalName;
