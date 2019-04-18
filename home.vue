@@ -54,7 +54,7 @@
                         <div v-for="item in featureItems" class="feature_item">
                             <a :href="item.url">
                                 <div>
-                                    <img :src="item.image_url" :alt="'Click here for ' + item.name"/>
+                                    <img :src="item.image_url" :alt="'Click here for ' + item.name" />
                                     <h3>{{ item.name }}</h3>
                                 </div>
                             </a>
