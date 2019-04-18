@@ -51,9 +51,9 @@
                 </div>
                 <div class="main_container">
                     <div v-if="featureItems" class="feature_item_container">
-                        <div v-for="item in featureItems">
+                        <div v-for="item in featureItems" class="feature_item">
                             <a :href="item.url">
-                                <div class="feature_item">
+                                <div >
                                     <img :src="item.image_url" :alt="'Click here for ' + item.name" />
                                     <div class="feature_item_box">
                                         <h3>{{ item.name }}</h3>
