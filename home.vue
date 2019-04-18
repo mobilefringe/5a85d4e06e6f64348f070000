@@ -51,11 +51,13 @@
                 </div>
                 <div class="main_container">
                     <div v-if="featureItems" class="feature_item_container">
-                        <div v-for="item in featureItems" class="feature_item">
+                        <div v-for="item in featureItems">
                             <a :href="item.url">
-                                <div class="feature_item_box">
+                                <div class="feature_item">
                                     <img :src="item.image_url" :alt="'Click here for ' + item.name" />
-                                    <h3>{{ item.name }}</h3>
+                                    <div class="feature_item_box">
+                                        <h3>{{ item.name }}</h3>
+                                    </div>
                                 </div>
                             </a>
                         </div>
