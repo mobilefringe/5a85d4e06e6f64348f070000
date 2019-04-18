@@ -42,7 +42,7 @@ require.config({
         'Raphael': 'https://cdnjs.cloudflare.com/ajax/libs/raphael/2.2.7/raphael.min',
         'mousewheel': 'https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min',
         'mm_mapsvg': 'https://preview-mmvue.codecloudapp.com/mallmaverick_svgmap',
-        'svg-map' : 'https://mmvue.codecloudapp.com/svg_map.vue?noext'
+        'svg-map' : 'https://mmvue.codecloudapp.com/svg.vue?noext'
     }
 });
 
