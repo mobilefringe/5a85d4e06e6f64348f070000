@@ -51,7 +51,6 @@ require.config({
 
 requirejs.onError = function (err) {
     if (err.requireType === 'timeout') {
-        // $("body").trigger({type:"moduleFail",err:err})
         window.bugsnagClient.notify(err);
     } else {
         window.bugsnagClient.notify(err);
