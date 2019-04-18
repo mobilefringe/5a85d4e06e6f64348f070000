@@ -43,8 +43,8 @@ require.config({
         'mousewheel': 'https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min',
         'mm_mapsvg': 'https://preview-mmvue.codecloudapp.com/mallmaverick_svgmap',
         'svg-map' : 'https://mmvue.codecloudapp.com/svg_map.vue?noext',
-        'bugsnag' : 'http://mmvue.codecloudapp.com/bugsnag',
-        'bugsnag-vue' : 'http://mmvue.codecloudapp.com/bugsnag-vue'
+        'bugsnag' : 'https://mmvue.codecloudapp.com/bugsnag',
+        'bugsnag-vue' : 'https://mmvue.codecloudapp.com/bugsnag-vue'
         
     }
 });
