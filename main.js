@@ -41,7 +41,7 @@ require.config({
         // Dependencies for Map //
         'Raphael': 'https://cdnjs.cloudflare.com/ajax/libs/raphael/2.2.7/raphael.min',
         'mousewheel': 'https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min',
-        'mm_mapsvg': 'https://preview-mmvue.codecloudapp.com/svgmap',
+        'mm_mapsvg': 'https://preview-mmvue.codecloudapp.com/mallmaverick_svgmap',
         'svg-map' : 'https://mmvue.codecloudapp.com/svg_map.vue?noext',
         'bugsnag' : 'https://mmvue.codecloudapp.com/bugsnag',
         'bugsnag-vue' : 'https://mmvue.codecloudapp.com/bugsnag-vue'
