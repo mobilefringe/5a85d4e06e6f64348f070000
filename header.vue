@@ -87,9 +87,9 @@
                                         <router-link tag="li" to="/directions" class="submenu_item" exact>
                                             <a>Find Us</a>
                                         </router-link>
-                                        <router-link tag="li" to="/pages/milton-about-us" class="submenu_item" exact>
-                                            <a>About Us</a>
-                                        </router-link>
+                                        <!--<router-link tag="li" to="/pages/milton-about-us" class="submenu_item" exact>-->
+                                        <!--    <a>About Us</a>-->
+                                        <!--</router-link>-->
                                         <router-link tag="li" to="/jobs" class="submenu_item" exact>
                                             <a>Jobs</a>
                                         </router-link>
