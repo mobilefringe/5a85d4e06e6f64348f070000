@@ -44,6 +44,7 @@ require.config({
         'mm_mapsvg': 'https://preview-mmvue.codecloudapp.com/mallmaverick_svgmap',
         'svg-map' : 'https://mmvue.codecloudapp.com/svg_map.vue?noext',
         'bugsnag-vue' : 'http://mmvue.codecloudapp.com/bugsnag-vue',
+        'bugsnag' : 'http://mmvue.codecloudapp.com/bugsnag'
         
     }
 });
