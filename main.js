@@ -43,8 +43,8 @@ require.config({
         'mousewheel': 'https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min',
         'mm_mapsvg': 'https://preview-mmvue.codecloudapp.com/mallmaverick_svgmap',
         'svg-map' : 'https://mmvue.codecloudapp.com/svg_map.vue?noext',
-        'bugsnag-vue' : 'http://mmvue.codecloudapp.com/bugsnag-vue',
-        'bugsnag' : 'http://mmvue.codecloudapp.com/bugsnag'
+        'bugsnag' : 'http://mmvue.codecloudapp.com/bugsnag',
+        'bugsnag-vue' : 'http://mmvue.codecloudapp.com/bugsnag-vue'
         
     }
 });
@@ -59,7 +59,7 @@ requirejs.onError = function (err) {
     }
 };
 
-require(['Vue', 'vuex', 'vue2-filters', 'vue_router', 'routes', 'vuex-router-sync', 'datastore', 'vue-i18n', 'locales', 'moment', 'vue-meta', 'vue!loading.vue', 'vue!messages.vue', 'vue!header.vue', 'vue!footer.vue', 'vue!inside_header.vue'], function (Vue, Vuex, Vue2Filters, VueRouter, appRoutes, VuexRouterSync, store, VueI18n, messages, moment, Meta, LoadingComponent, MessagesComponent, HeaderComponent, FooterComponent, insideHeaderComponent) {
+require(['Vue', 'vuex', 'vue2-filters', 'vue_router', 'routes', 'vuex-router-sync', 'datastore', 'vue-i18n', 'locales', 'moment', 'vue-meta', 'vue!loading.vue', 'vue!messages.vue', 'vue!header.vue', 'vue!footer.vue', 'vue!inside_header.vue', 'bugsnag', 'bugnag-vue'], function (Vue, Vuex, Vue2Filters, VueRouter, appRoutes, VuexRouterSync, store, VueI18n, messages, moment, Meta, LoadingComponent, MessagesComponent, HeaderComponent, FooterComponent, insideHeaderComponent) {
 
     Vue.use(Meta);
     Vue.use(VueRouter);
