@@ -47,6 +47,7 @@
             <h1 style="display:none;" v-if="property">{{property.name}}</h1>
             <router-view v-if="dataLoaded" class="page-content"></router-view>
             <footer-component :social_media="social_media" v-if="dataLoaded"></footer-component>
+            <div class="modal-backdrop custom_backdrop hidden_now" id="popup_backdrop"></div>
         </div>
         {%endraw-%}
         <script src="https://unpkg.com/babel-polyfill@6.26.0/dist/polyfill.min.js"></script>
