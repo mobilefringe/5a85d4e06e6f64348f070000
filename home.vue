@@ -105,7 +105,8 @@
                         meta_title: "",
                         meta_description: "",
                         meta_keywords: ""
-                    }
+                    },
+                    popup: null
                 }
             },
             created(){
@@ -114,6 +115,8 @@
                     this.dataLoaded = true;  
                     
                     this.meta = this.findMetaDataByPath(this.$route.path);
+                    
+                    
                 });
             },
             computed: {
