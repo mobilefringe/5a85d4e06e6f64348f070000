@@ -116,7 +116,9 @@
                     
                     this.meta = this.findMetaDataByPath(this.$route.path);
                     
-                    
+                    if(this.$store.state.popups && this.$store.state.popups.length>0){
+                    this.popup = return this.$store.state.popups[0];
+                    }
                 });
             },
             computed: {
