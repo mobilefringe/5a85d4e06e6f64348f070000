@@ -105,6 +105,11 @@ require(['Vue', 'vuex', 'vue2-filters', 'vue_router', 'routes', 'vuex-router-syn
                         url: "https://twitter.com/MiltonMall",
                         iconClass: "fa fa-twitter-square"
                     }
+                    {
+                        name: "Instagram",
+                        url: "https://www.instagram.com/miltonmall_/",
+                        iconClass: "fa fa-instagram"
+                    }
                 ],
             }
         },
