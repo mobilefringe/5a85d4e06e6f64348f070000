@@ -175,7 +175,8 @@
                     }
                 },
                 updateCurrentContest (id) {
-                    this.currentContest = this.findContestBySlug(id);
+                    this.currentContest = this.findContestBySlug('milton-contest');
+                    console.log("contest", this.currentContest )
                 },
                 isMultiDay(currentPromo) {
 					var timezone = this.timezone
