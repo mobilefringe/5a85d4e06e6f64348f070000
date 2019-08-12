@@ -175,6 +175,7 @@
                     }
                 },
                 updateCurrentContest (id) {
+                    console.log("this.processedContests", this.processedContests)
                     this.currentContest = this.findContestBySlug('milton-contest');
                     console.log("contest", this.currentContest )
                 },
