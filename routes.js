@@ -42,7 +42,7 @@ define([], function () {
                     meta: {
                         pageName: 'Contest',
                     },
-                    name: 'contact'
+                    name: 'contest'
                 }
             ]
         },
