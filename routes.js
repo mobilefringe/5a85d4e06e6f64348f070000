@@ -33,16 +33,13 @@ define([], function () {
             ]
         },
         {
-            path: '"/contest/" +  :id',
+            path: '/contest',
             component: view('default'),
             children: [
                 {
-                    path: '',
-                    component: view('contest_details'),
-                    meta: {
-                        pageName: 'Contest',
-                    },
-                    name: 'contest',
+                    path: ':id',
+                    component: view('contest'),
+                    name: 'Contest',
                     props: true
                 }
             ]
