@@ -39,6 +39,9 @@ define([], function () {
                 {
                     path: ':id',
                     component: view('contest'),
+                    meta: {
+                        pageName: 'Contest',
+                    },
                     name: 'Contest',
                     props: true
                 }
