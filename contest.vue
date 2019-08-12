@@ -122,8 +122,7 @@
                     dataLoaded: false,
                     pageBanner: null,
                     currentContest: {},
-                    kidsClubForm: false,
-                    contestDisclaimer: {},
+
                     form_data: {},
                     formSuccess: false,
                     formError: false
