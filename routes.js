@@ -33,6 +33,20 @@ define([], function () {
             ]
         },
         {
+            path: '/contest',
+            component: view('default'),
+            children: [
+                {
+                    path: '',
+                    component: view('contest'),
+                    meta: {
+                        pageName: 'Contest',
+                    },
+                    name: 'contact'
+                }
+            ]
+        },
+        {
             path: '/directions',
             component: view('default'),
             children: [
@@ -69,7 +83,6 @@ define([], function () {
                 }
             ]
         },
-        ,
         {
             path: '/sustainability_and_wellness_program',
             component: view('default'),
