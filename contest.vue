@@ -12,10 +12,8 @@
     </div>
 </template>
 <script>
-    define(["Vue", "vuex", "vue-meta", "vue-lazy-load"], function (Vue, Vuex, Meta, VueLazyload) {
-        Vue.use(Meta);
-        Vue.use(VueLazyload);
-        return Vue.component("jobs-component", {
+    define(["Vue", "vuex"], function (Vue, Vuex) {
+        return Vue.component("contest-component", {
             template: template, // the variable template will be injected
             data: function () {
                 return {
