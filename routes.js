@@ -33,7 +33,7 @@ define([], function () {
             ]
         },
         {
-            path: '/contest/:id',
+            path: '"/contest/" +  :id',
             component: view('default'),
             children: [
                 {
