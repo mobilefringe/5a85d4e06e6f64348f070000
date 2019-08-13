@@ -55,6 +55,7 @@
                             value.store.no_store_logo = true;
                         } else if (!value.store) {
                             value.store = {};
+                            value.store.name = vm.property.name;
                             value.store.store_front_url_abs = "//codecloud.cdn.speedyrails.net/sites/5b22de6b6e6f640dbb2c0000/image/png/1527612896000/milton_logo.png";
                         }
                         temp_job.push(value);
