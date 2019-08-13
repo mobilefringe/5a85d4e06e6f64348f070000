@@ -51,19 +51,13 @@
                     var job_list = this.processedJobs;
                     var temp_job = [];
                     _.forEach(job_list, function(value, key) {
-                        // today = moment().tz(vm.timezone);
-                        // webDate = moment(value.show_on_web_date).tz(vm.timezone);
-                        // if (today >= webDate) {
-                            value.description_short = _.truncate(value.description, { 'length': 150 });
-                            
-                            if (value.store  && _.includes(value.store.store_front_url_abs, 'missing')) {
-                                value.store.no_store_logo = true;
-                            } else if (!value.store) {
-                                value.store = {};
-                                value.store.store_front_url_abs = vm.property.default_logo_url;
-                            }
-                            temp_job.push(value);
-                        // }
+                        if (value.store  && _.includes(value.store.store_front_url_abs, 'missing')) {
+                            value.store.no_store_logo = true;
+                        } else if (!value.store) {
+                            value.store = {};
+                            value.store.store_front_url_abs = "//codecloud.cdn.speedyrails.net/sites/5b22de6b6e6f640dbb2c0000/image/png/1527612896000/milton_logo.png";
+                        }
+                        temp_job.push(value);
                     });
 
                     return temp_job;
