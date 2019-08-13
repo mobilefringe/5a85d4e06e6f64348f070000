@@ -9,7 +9,7 @@
                 <div v-if="processedJobs.length == 0">
                     <p>Sorry, there are no job postings at this time. Please check back soon.</p>
                 </div>
-                <div class="job_container" v-if="processedJobs.length >= 1" v-for="job in processedJobs">
+                <div class="job_container" v-if="jobs.length >= 1" v-for="job in jobs">
                     <div class="job_image_container">
                         <img v-lazy="job.store.store_front_url_abs" :alt="job.name" />
                     </div>
