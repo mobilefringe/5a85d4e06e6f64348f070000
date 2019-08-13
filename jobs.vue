@@ -28,7 +28,6 @@
 </template>
 <script>
     define(["Vue", "vuex", "moment", "moment-timezone", "vue-moment", "vue-lazy-load"], function(Vue, Vuex, moment, tz, VueMoment, VueLazyload) {
-        Vue.use(Meta);
         Vue.use(VueLazyload);
         return Vue.component("jobs-component", {
             template: template, // the variable template will be injected
